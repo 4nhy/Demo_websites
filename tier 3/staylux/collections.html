@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayLux — Private Collections</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #030508;
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-blur: blur(32px) saturate(210%);
+      --accent-gold: #D4AF37; --accent-gold-light: #F3E5AB; --text-muted: #94A3B8;
+      --font-serif: 'Cinzel', serif; --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --radius-pill: 9999px; --radius-lg: 28px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background: var(--bg-dark); color: #FFF; font-family: var(--font-sans); padding: 3rem 5rem; min-height: 100vh; line-height: 1.6; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; }
+    .brand-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight:700; color:#FFF; text-decoration:none; letter-spacing:0.12em; }
+    .brand-logo span { color: var(--accent-gold); }
+    .nav-links { display: flex; gap: 3rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration:none; font-size: 0.85rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; transition: 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-gold-light); }
+    
+    .page-title { font-family: var(--font-serif); font-size: 3.5rem; margin-bottom: 1rem; }
+    .page-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; font-weight:300; margin-bottom: 4rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .card {
+      background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-lg); overflow: hidden; padding: 2.5rem; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card:hover { border-color: var(--accent-gold); transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 30px rgba(212,175,55,0.2); }
+    .card-img { width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 1.8rem; }
+    .card-tag { color: var(--accent-gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; }
+    .card-title { font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .card-desc { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; margin-bottom: 1.5rem; }
+    
+    .btn-gold {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #A37F2C 100%);
+      color: #FFF; padding: 0.75rem 2rem; border-radius: var(--radius-pill); text-decoration: none;
+      font-size: 0.8rem; font-weight: 600; letter-spacing:0.1em; text-transform: uppercase; display: inline-block; transition: 0.3s;
+    }
+    .btn-gold:hover { filter: brightness(1.15); transform: scale(1.03); }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <a href="index.html" class="brand-logo">Stay<span>Lux</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html" class="active">Collections</a></li>
+      <li><a href="estates.html">Estates</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="concierge.html">Concierge</a></li>
+    </ul>
+  </div>
+
+  <h1 class="page-title">Curated Collections</h1>
+  <p class="page-desc">Explore hand-selected luxury portfolios tailored for architectural design, privacy, and serene high-end living.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" class="card-img" />
+      <div class="card-tag">12 Private Islands Available</div>
+      <h2 class="card-title">Ocean & Island Atolls</h2>
+      <p class="card-desc">Secluded island Sanctuaries with private helipads, underwater dining, and high-security isolation.</p>
+      <a href="estates.html" class="btn-gold">Explore Collection</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" class="card-img" />
+      <div class="card-tag">8 Chalets Available</div>
+      <h2 class="card-title">Alpine & Glacier Lodges</h2>
+      <p class="card-desc">High-altitude glass residences integrated into snowy mountain ridges with thermal wellness spas.</p>
+      <a href="estates.html" class="btn-gold">Explore Collection</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" class="card-img" />
+      <div class="card-tag">15 Estates Available</div>
+      <h2 class="card-title">Architectural Wonders</h2>
+      <p class="card-desc">Structural marvels designed by world-renowned architects featuring automated interior environments.</p>
+      <a href="estates.html" class="btn-gold">Explore Collection</a>
+    </div>
+  </div>
+</body>
+</html>

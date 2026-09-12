@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayLux — The Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #030508;
+      --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-blur: blur(32px) saturate(210%);
+      --accent-gold: #D4AF37; --accent-gold-light: #F3E5AB; --text-muted: #94A3B8;
+      --font-serif: 'Cinzel', serif; --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --radius-lg: 28px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background: var(--bg-dark); color: #FFF; font-family: var(--font-sans); padding: 3rem 5rem; min-height: 100vh; line-height: 1.6; }
+    .header-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; }
+    .brand-logo { font-family: var(--font-serif); font-size: 1.8rem; font-weight:700; color:#FFF; text-decoration:none; letter-spacing:0.12em; }
+    .brand-logo span { color: var(--accent-gold); }
+    .nav-links { display: flex; gap: 3rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration:none; font-size: 0.85rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; transition: 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-gold-light); }
+    
+    .article-hero {
+      position: relative; height: 480px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 4rem;
+      display: flex; align-items: flex-end; padding: 4rem;
+      background: linear-gradient(180deg, rgba(3,5,8,0.2) 0%, rgba(3,5,8,0.95) 100%), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80') center/cover;
+    }
+    .article-tag { color: var(--accent-gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem; }
+    .article-title { font-family: var(--font-serif); font-size: 2.8rem; max-width: 800px; line-height: 1.15; }
+
+    .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+    .article-card {
+      background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-lg); padding: 2.5rem; transition: 0.4s; cursor: pointer;
+    }
+    .article-card:hover { border-color: var(--accent-gold); transform: translateY(-6px); }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <a href="index.html" class="brand-logo">Stay<span>Lux</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="estates.html">Estates</a></li>
+      <li><a href="journal.html" class="active">Journal</a></li>
+      <li><a href="concierge.html">Concierge</a></li>
+    </ul>
+  </div>
+
+  <div class="article-hero">
+    <div>
+      <div class="article-tag">Issue 04 • Cover Feature</div>
+      <h1 class="article-title">The Monolithic Cliffside Residences of 2026</h1>
+    </div>
+  </div>
+
+  <div class="articles-grid">
+    <div class="article-card" onclick="alert('Opening Article: High-Altitude Thermal Architecture')">
+      <div class="article-tag">Architecture</div>
+      <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 0.5rem 0;">High-Altitude Thermal Architecture</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; font-weight:300;">Exploring structural alpine integration in Swiss glass chalets with zero-carbon footprint technology.</p>
+    </div>
+
+    <div class="article-card" onclick="alert('Opening Article: Remote Culinary Pop-ups')">
+      <div class="article-tag">Gastronomy</div>
+      <h2 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 0.5rem 0;">Remote Culinary Pop-ups in Private Sanctuaries</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; font-weight:300;">How Michelin chefs bring haute gastronomy to unlisted ocean atolls with zero supply chain compromise.</p>
+    </div>
+  </div>
+</body>
+</html>
