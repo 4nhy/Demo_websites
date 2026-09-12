@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifesto &mdash; Aether Press</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav>
+        <a href="index.html" class="brand">Aether Press</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+        </ul>
+    </nav>
+
+    <main class="section-container" style="max-width: 900px;">
+        <span class="serif-italic reveal" style="font-size: 1.4rem; color: #736f64; display: block; margin-bottom: 1rem;">Our Philosophy</span>
+        <h1 class="reveal" style="font-size: clamp(3.5rem, 6vw, 6rem); font-weight: 400; line-height: 1.05; margin-bottom: 3rem;">In defense of the <span class="gradient-text">physical artifact</span>.</h1>
+        
+        <div class="reveal" style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); display: flex; flex-direction: column; gap: 2rem; transition-delay: 0.2s;">
+            <p>We live in an era of infinite scroll, ephemeral cloud storage, and compressed pixels. Digital culture moves at a blistering pace, yet leaves very little residue behind. Aether Press was founded on a singular premise: ideas worth having are ideas worth holding.</p>
+            <p>Our publishing house collaborates closely with independent architects, software engineers, and typographers to produce finite physical monographs. We reject mass-market glossy paperbacks in favor of Smyth-sewn bindings, heavy archival stocks, and unbleached cotton cloths.</p>
+            <p>Every book we release is designed not just to be read once, but to occupy physical space on a desk or shelf as a permanent monument to human inquiry.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AETHER PRESS. ALL RIGHTS RESERVED.</p>
+        <p class="serif-italic" style="font-size: 1.1rem;">Manifesto revised annually.</p>
+    </footer>
+
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursorRing.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive &mdash; Aether Press</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav>
+        <a href="index.html" class="brand">Aether Press</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+        </ul>
+    </nav>
+
+    <main class="section-container">
+        <span class="serif-italic reveal" style="font-size: 1.4rem; color: #736f64; display: block; margin-bottom: 0.5rem;">Past Editions</span>
+        <h1 class="reveal" style="font-size: clamp(3rem, 5vw, 5rem); font-weight: 400; margin-bottom: 4rem;">The <span class="gradient-text">Archive</span></h1>
+
+        <div class="catalog-grid">
+            <div class="catalog-card reveal">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop" alt="Archive 1">
+                <span class="serif-italic" style="font-size: 0.9rem; color: #736f64;">2024 &bull; Out of Print</span>
+                <h3>Brutalist Habitation</h3>
+                <span style="font-weight: 500; font-size: 1rem; display: block; margin-top: 0.5rem; color: #888;">Archived Edition</span>
+            </div>
+            <div class="catalog-card reveal" style="transition-delay: 0.15s;">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop" alt="Archive 2">
+                <span class="serif-italic" style="font-size: 0.9rem; color: #736f64;">2023 &bull; Out of Print</span>
+                <h3>Algorithmic Grids</h3>
+                <span style="font-weight: 500; font-size: 1rem; display: block; margin-top: 0.5rem; color: #888;">Archived Edition</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AETHER PRESS. ALL RIGHTS RESERVED.</p>
+        <p class="serif-italic" style="font-size: 1.1rem;">Permanent record archive.</p>
+    </footer>
+
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursorRing.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

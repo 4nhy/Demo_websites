@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog &mdash; Aether Press</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav>
+        <a href="index.html" class="brand">Aether Press</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+        </ul>
+    </nav>
+
+    <main class="section-container">
+        <span class="serif-italic reveal" style="font-size: 1.4rem; color: #736f64; display: block; margin-bottom: 0.5rem;">Complete Repository</span>
+        <h1 class="reveal" style="font-size: clamp(3rem, 5vw, 5rem); font-weight: 400; margin-bottom: 4rem;">The <span class="gradient-text">Catalog</span></h1>
+
+        <div class="catalog-grid">
+            <a href="book-details-1.html" class="catalog-card reveal">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="Book 1">
+                <span class="serif-italic" style="font-size: 0.9rem; color: #736f64;">Typography &bull; Vol. I</span>
+                <h3>The Anatomy of Letters</h3>
+                <span style="font-weight: 500; font-size: 1.05rem; display: block; margin-top: 0.6rem;" class="gradient-text">$38.00 USD</span>
+            </a>
+            <a href="book-details-1.html" class="catalog-card reveal" style="transition-delay: 0.15s;">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop" alt="Book 2">
+                <span class="serif-italic" style="font-size: 0.9rem; color: #736f64;">Technology &bull; Vol. II</span>
+                <h3>Chronicles of Code</h3>
+                <span style="font-weight: 500; font-size: 1.05rem; display: block; margin-top: 0.6rem;" class="gradient-text">$45.00 USD</span>
+            </a>
+            <a href="book-details-1.html" class="catalog-card reveal" style="transition-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop" alt="Book 3">
+                <span class="serif-italic" style="font-size: 0.9rem; color: #736f64;">Architecture &bull; Vol. III</span>
+                <h3>Monolithic Spaces</h3>
+                <span style="font-weight: 500; font-size: 1.05rem; display: block; margin-top: 0.6rem;" class="gradient-text">$54.00 USD</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AETHER PRESS. ALL RIGHTS RESERVED.</p>
+        <p class="serif-italic" style="font-size: 1.1rem;">Catalog updated quarterly.</p>
+    </footer>
+
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursorRing.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+        document.querySelectorAll('a, button, .catalog-card').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursorRing.style.width='55px'; cursorRing.style.height='55px'; cursorRing.style.borderColor='#ff512f'; });
+            el.addEventListener('mouseleave', () => { cursorRing.style.width='36px'; cursorRing.style.height='36px'; cursorRing.style.borderColor='rgba(16,16,16,0.4)'; });
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

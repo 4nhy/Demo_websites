@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Anatomy of Letters &mdash; Aether Press</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav>
+        <a href="index.html" class="brand">Aether Press</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+        </ul>
+    </nav>
+
+    <main class="section-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;">
+            <div class="reveal">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" style="width:100%; height:550px; object-fit:cover; border-radius:20px; border:1px solid var(--border-subtle);" alt="Book">
+            </div>
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <span class="serif-italic" style="font-size: 1.3rem; color: #736f64;">Typography &bull; Vol. I</span>
+                <h1 style="font-size: clamp(3rem, 4vw, 4.5rem); font-weight: 400; margin: 0.5rem 0 1.5rem 0;">The Anatomy of Letters</h1>
+                <p style="font-size: 1.2rem; font-weight: 500; margin-bottom: 2rem;" class="gradient-text">$38.00 USD &mdash; In Stock</p>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">A comprehensive visual study into grid systems, ligature spacing, and classical grotesque typefaces. This volume compiles over 300 specimens of rare metal type from European foundries, paired with essays on modernist print layout.</p>
+                
+                <div style="border-top: 1px solid var(--border-subtle); padding-top: 2rem; margin-bottom: 2.5rem;">
+                    <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem; font-weight: 600;">Specifications</p>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">&bull; 240 Pages, Smyth-sewn hardcover binding<br>&bull; Printed on 140gsm Munken Kristall paper<br>&bull; Foil-stamped linen cover cloth</p>
+                </div>
+
+                <a href="catalog.html" class="btn-interactive"><span>Acquire Volume</span></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AETHER PRESS. ALL RIGHTS RESERVED.</p>
+        <p class="serif-italic" style="font-size: 1.1rem;">Volume I Monograph.</p>
+    </footer>
+
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursorRing.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
