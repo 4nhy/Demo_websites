@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL STORES (44 LOCATIONS) — KINETIC MONOLITH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="noise-bg">
+    <header class="top-header">
+        <div class="header-left"><a href="index.html" class="brand-logo">KINETIC MONOLITH</a></div>
+        <div class="header-center">
+            <a href="archive.html" class="nav-link"><span>01. Archive</span></a>
+            <span class="divider">/</span>
+            <a href="stores.html" class="nav-link active"><span>02. Global Stores</span></a>
+            <span class="divider">/</span>
+            <a href="projects.html" class="nav-link"><span>03. R&amp;D Projects</span></a>
+            <span class="divider">/</span>
+            <a href="lab.html" class="nav-link"><span>04. Optical Lab</span></a>
+        </div>
+        <div class="header-right">
+            <button class="menu-trigger-btn" onclick="openMenuModal()">MENU ☰</button>
+            <button class="bag-trigger-btn" onclick="openBagModal()">/ BAG (2)</button>
+        </div>
+    </header>
+
+    <section class="page-header-section">
+        <span class="tag">GLOBAL FOOTPRINT</span>
+        <h1>44 OPERATED STORES WORLDWIDE</h1>
+        <p>Architectural retail spaces designed in collaboration with brutalist brutalists across Seoul, Tokyo, London, and New York.</p>
+    </section>
+
+    <section class="stores-content-section">
+        <div class="store-grid">
+            <div class="store-card tilt-card">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop" alt="Store">
+                <h3>SEOUL FLAGSHIP (DOSAN)</h3>
+                <p>Dosan-daero 45-gil, Gangnam-gu, Seoul</p>
+                <button class="cta-secondary" onclick="alert('Booking private consultation for Seoul Flagship...')">BOOK VISIT</button>
+            </div>
+            <div class="store-card tilt-card">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800&auto=format&fit=crop" alt="Store">
+                <h3>TOKYO AOYAMA LAB</h3>
+                <p>5 Minami-Aoyama, Minato-ku, Tokyo</p>
+                <button class="cta-secondary" onclick="alert('Booking private consultation for Tokyo Aoyama...')">BOOK VISIT</button>
+            </div>
+            <div class="store-card tilt-card">
+                <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?q=80&w=800&auto=format&fit=crop" alt="Store">
+                <h3>LONDON SOHO MONOLITH</h3>
+                <p>Berwick St, Soho, London W1F</p>
+                <button class="cta-secondary" onclick="alert('Booking private consultation for London Soho...')">BOOK VISIT</button>
+            </div>
+            <div class="store-card tilt-card">
+                <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=800&auto=format&fit=crop" alt="Store">
+                <h3>NEW YORK SOHO</h3>
+                <p>Greene St, New York, NY 10012</p>
+                <button class="cta-secondary" onclick="alert('Booking private consultation for New York Soho...')">BOOK VISIT</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-bottom">
+            <span>© 2026 KINETIC MONOLITH INC.</span>
+            <a href="index.html" style="color:#fff;">← BACK TO HOME HUB</a>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="menuModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeMenuModal()">✕ CLOSE</button>
+            <h2>SYSTEM DIRECTORY</h2>
+            <ul>
+                <li><a href="index.html">00. Home Hub</a></li>
+                <li><a href="archive.html">01. Complete Archive (488 Models)</a></li>
+                <li><a href="stores.html">02. Directly Operated Stores (44)</a></li>
+                <li><a href="projects.html">03. Architectural Projects &amp; Vault</a></li>
+                <li><a href="lab.html">04. Optical Refraction Lab</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="bagModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBagModal()">✕ CLOSE</button>
+            <h2>YOUR ARCHIVAL BAG</h2>
+            <button class="cta-primary" style="width:100%; margin-top:2rem;" onclick="alert('Proceeding to checkout...')">CHECKOUT NOW</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

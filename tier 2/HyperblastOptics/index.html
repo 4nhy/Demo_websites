@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINETIC MONOLITH — ULTRA-PREMIUM ARCHITECTURE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode-body">
+
+    <!-- ADVANCED MULTI-LAYERED TEXTURE & NOISE OVERLAYS -->
+    <div class="noise-overlay"></div>
+    <div class="grid-texture-overlay"></div>
+    <div class="vignette-overlay"></div>
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="top-header">
+        <div class="header-left">
+            <span class="brand-logo" onclick="switchPage('home')">KINETIC MONOLITH</span>
+        </div>
+        <div class="header-center">
+            <a href="#" class="nav-link active" data-page="home" onclick="switchPage('home'); return false;">Home</a>
+            <span class="divider">/</span>
+            <a href="#" class="nav-link" data-page="archive" onclick="switchPage('archive'); return false;">Archive Grid</a>
+        </div>
+        <div class="header-right">
+            <a href="#" class="bag-link" onclick="openBagModal(); return false;">Bag (<span id="bagCount">0</span>)</a>
+        </div>
+    </header>
+
+    <!-- PAGE 1: HOME -->
+    <div id="page-home" class="page-view active-page">
+        
+        <!-- HERO SECTION WITH PARALLAX & GLOWING CRIMSON MESH -->
+        <section class="hero-section" id="heroSection">
+            <div class="hero-left-pane">
+                <span class="hero-tag reveal-text">EDITION 2026 // SEOUL & TOKYO</span>
+                <h1 class="hero-title reveal-text-delay-1">RAW OPTICAL</h1>
+                <h1 class="hero-title reveal-text-delay-1">MONOLITH</h1>
+                <p class="hero-desc reveal-text-delay-2">Constructed from unpolished pure titanium and stark white acetate. Absolute horizontal geometry, multi-layered noise textures, and violent crimson gradient glows.</p>
+                <div class="hero-actions reveal-text-delay-3">
+                    <button class="kinetic-btn primary" onclick="switchPage('archive')">Explore Archive &gt;</button>
+                </div>
+            </div>
+            <div class="hero-right-pane red-textured-mesh">
+                <div class="ambient-glow-orb"></div>
+                <div class="pure-png-container">
+                    <img src="glasses-1.png" alt="Series 01" class="isolated-glasses-png horizontal-normal floating-anim" id="heroGlasses">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4-GRID SECTION -->
+        <section class="gm-grid-section">
+            <div class="gm-row top-row">
+                <div class="gm-cell cell-left">
+                    <span class="cell-sub">488 MODELS</span>
+                    <h2 class="cell-title">SUNGLASSES</h2>
+                    <button class="text-link-btn" onclick="switchPage('archive')">View All Sunglasses &gt;</button>
+                </div>
+                <div class="gm-cell cell-right">
+                    <div class="ambient-glow-orb-small"></div>
+                    <div class="pure-png-container">
+                        <img src="glasses-4.png" alt="Sunglasses New" class="isolated-glasses-png horizontal-normal floating-anim-slow">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gm-row bottom-row">
+                <div class="gm-cell cell-bottom-left">
+                    <span class="cell-sub">360 MODELS</span>
+                    <h2 class="cell-title">GLASSES</h2>
+                    <button class="text-link-btn" onclick="switchPage('archive')">View All Optical &gt;</button>
+                    <div class="pure-png-container-straight">
+                        <img src="glasses-5.png" alt="Glasses Horizontal" class="isolated-glasses-png-straight horizontal-normal">
+                    </div>
+                </div>
+                <div class="gm-cell cell-bottom-right">
+                    <span class="cell-sub">27 MODELS</span>
+                    <h2 class="cell-title">EXCLUSIVE</h2>
+                    <span class="scroll-indicator">SCROLL &gt;</span>
+                    <div class="pure-png-container-circ">
+                        <img src="glasses-3.png" alt="Exclusive Asset" class="isolated-glasses-png-circ horizontal-normal floating-anim">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: FLUID DYNAMICS PARALLAX BANNER -->
+        <section class="creative-parallax-section">
+            <div class="parallax-bg-text" id="parallaxText">KINETIC // MONOLITH // ARCHITECTURE // FLUID // DYNAMICS //</div>
+            <div class="parallax-content-box">
+                <span class="section-tag">01 / STRUCTURAL TEXTURE</span>
+                <h2>BRUTALIST TITANIUM CHASSIS INTEGRITY</h2>
+                <p>Every frame is milled from solid blocks of industrial grade titanium, finished with exposed textures, laser etching, and absolute white-red structural contrast.</p>
+                <div class="floating-mini-preview">
+                    <img src="glasses-2.png" alt="Mini Float" class="float-asset horizontal-normal">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: RED & WHITE ANATOMY LAB -->
+        <section class="blueprint-section-aura">
+            <div class="blueprint-header-aura">
+                <span class="section-tag aura-tag">02 / IMMERSIVE ANATOMY LAB</span>
+                <h2>CRIMSON LINE & WHITE MONOLITH FUSION</h2>
+                <p>Examine core structural node tolerances under high-intensity red laser illumination.</p>
+            </div>
+            <div class="blueprint-grid-aura">
+                <div class="blueprint-card-aura">
+                    <div class="card-glow-bg"></div>
+                    <span class="bp-num-aura">NODE 01</span>
+                    <h3>BETA-TITANIUM CORE</h3>
+                    <p>Unalterable stiffness matrix designed to absorb heavy directional torsion.</p>
+                    <div class="bp-img-wrap-aura"><img src="glasses-1.png" alt="BP 1" class="bp-img-horizontal horizontal-normal floating-anim"></div>
+                    <div class="card-footer-metric"><span>TENSION: 1200MPa</span><span>STATUS: RETAINED</span></div>
+                </div>
+                <div class="blueprint-card-aura">
+                    <div class="card-glow-bg"></div>
+                    <span class="bp-num-aura">NODE 02</span>
+                    <h3>STARK WHITE ACETATE</h3>
+                    <p>High density polymer block, matte textured for an organic raw finish.</p>
+                    <div class="bp-img-wrap-aura"><img src="glasses-2.png" alt="BP 2" class="bp-img-horizontal horizontal-normal floating-anim-slow"></div>
+                    <div class="card-footer-metric"><span>DENSITY: 1.3G/CM³</span><span>STATUS: MATTE</span></div>
+                </div>
+                <div class="blueprint-card-aura">
+                    <div class="card-glow-bg"></div>
+                    <span class="bp-num-aura">NODE 03</span>
+                    <h3>CRIMSON POLARIZED SHIELD</h3>
+                    <p>Zero-reflection tinted mineral glass engineered for absolute visual clarity.</p>
+                    <div class="bp-img-wrap-aura"><img src="glasses-3.png" alt="BP 3" class="bp-img-horizontal horizontal-normal floating-anim"></div>
+                    <div class="card-footer-metric"><span>REFRACTION: 1.67</span><span>STATUS: COATED</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SPEC LAB -->
+        <section class="spec-lab-section">
+            <div class="spec-lab-left">
+                <span class="section-tag">03 / INTERACTIVE SPEC LAB</span>
+                <h2>CHASSIS TOLERANCE CONFIGURATOR</h2>
+                <p>Toggle structural nodes to inspect raw white and crimson architectural builds.</p>
+                <div class="spec-pills">
+                    <button class="spec-pill active" onclick="switchSpec('alpha', event)">ALPHA CHASSIS</button>
+                    <button class="spec-pill" onclick="switchSpec('beta', event)">BETA MONOLITH</button>
+                    <button class="spec-pill" onclick="switchSpec('omega', event)">OMEGA SERIES</button>
+                </div>
+            </div>
+            <div class="spec-lab-right">
+                <div class="spec-display-pod">
+                    <div class="pod-glow-accent"></div>
+                    <img src="glasses-1.png" alt="Spec Display" id="specImage" class="spec-interactive-img horizontal-normal floating-anim">
+                    <div class="spec-hud">
+                        <span id="hudTitle">MODEL: ALPHA-01</span>
+                        <span id="hudWeight">WEIGHT: 24.5G</span>
+                        <span id="hudStatus">STATUS: CERTIFIED TITANIUM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: BRAND MARQUEE -->
+        <section class="brand-marquee-section">
+            <div class="marquee-track">
+                <span>SEOUL DESIGN LAB</span>
+                <span class="dot">✦</span>
+                <span>TOKYO ARCHITECTURE</span>
+                <span class="dot">✦</span>
+                <span>RAW WHITE & RED</span>
+                <span class="dot">✦</span>
+                <span>TITANIUM MONOLITH</span>
+                <span class="dot">✦</span>
+                <span>LIMITED EDITION 2026</span>
+                <span class="dot">✦</span>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MATRIX VAULT TABLE -->
+        <section class="vault-section">
+            <div class="vault-header">
+                <span class="section-tag">05 / THE VAULT</span>
+                <h2>ARCHITECTURAL COMPARISON MATRIX</h2>
+                <p>Performance metrics across flagship white-red structural tiers.</p>
+            </div>
+            <div class="vault-table-wrapper">
+                <table class="vault-table">
+                    <thead>
+                        <tr>
+                            <th>SERIES MODEL</th>
+                            <th>CHASSIS MATERIAL</th>
+                            <th>LENS TECHNOLOGY</th>
+                            <th>WEIGHT</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ALPHA-01</strong></td>
+                            <td>Pure White Titanium</td>
+                            <td>Crimson Polarized Shield</td>
+                            <td>24.5g</td>
+                            <td>$420</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BETA-02</strong></td>
+                            <td>Matte Acetate Core</td>
+                            <td>Anti-Reflective Mineral</td>
+                            <td>21.0g</td>
+                            <td>$390</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OMEGA-03</strong></td>
+                            <td>Laser-Milled Monolith</td>
+                            <td>Multi-Layer Mirror Shield</td>
+                            <td>28.2g</td>
+                            <td>$480</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE 2: ARCHIVE -->
+    <div id="page-archive" class="page-view">
+        <div class="page-header-banner">
+            <span class="section-tag">ARCHIVE CATALOGUE 2026</span>
+            <h1>MASTER INDEX OF 488 SCULPTURAL SILHOUETTES</h1>
+        </div>
+        <div class="archive-grid-showcase">
+            <div class="archive-item">
+                <div class="transparent-cutout-box"><img src="glasses-1.png" alt="Model" class="cutout-img horizontal-normal floating-anim"></div>
+                <div class="item-details">
+                    <h3>KINETIC ALPHA 01</h3>
+                    <span>$420 // TITANIUM</span>
+                    <button class="add-bag-btn" onclick="addToBag('KINETIC ALPHA 01', 420)">+ ADD TO BAG</button>
+                </div>
+            </div>
+            <div class="archive-item">
+                <div class="transparent-cutout-box"><img src="glasses-2.png" alt="Model" class="cutout-img horizontal-normal floating-anim-slow"></div>
+                <div class="item-details">
+                    <h3>SEOUL MONOLITH 02</h3>
+                    <span>$390 // ACETATE</span>
+                    <button class="add-bag-btn" onclick="addToBag('SEOUL MONOLITH 02', 390)">+ ADD TO BAG</button>
+                </div>
+            </div>
+            <div class="archive-item">
+                <div class="transparent-cutout-box"><img src="glasses-3.png" alt="Model" class="cutout-img horizontal-normal floating-anim"></div>
+                <div class="item-details">
+                    <h3>TOKYO CHASSIS 03</h3>
+                    <span>$480 // TITANIUM</span>
+                    <button class="add-bag-btn" onclick="addToBag('TOKYO CHASSIS 03', 480)">+ ADD TO BAG</button>
+                </div>
+            </div>
+            <div class="archive-item">
+                <div class="transparent-cutout-box"><img src="glasses-4.png" alt="Model" class="cutout-img horizontal-normal floating-anim"></div>
+                <div class="item-details">
+                    <h3>KINETIC OMEGA 04</h3>
+                    <span>$450 // SUNGLASSES</span>
+                    <button class="add-bag-btn" onclick="addToBag('KINETIC OMEGA 04', 450)">+ ADD TO BAG</button>
+                </div>
+            </div>
+            <div class="archive-item">
+                <div class="transparent-cutout-box"><img src="glasses-5.png" alt="Model" class="cutout-img horizontal-normal floating-anim-slow"></div>
+                <div class="item-details">
+                    <h3>BUSAN OPTICAL 05</h3>
+                    <span>$360 // OPTICAL</span>
+                    <button class="add-bag-btn" onclick="addToBag('BUSAN OPTICAL 05', 360)">+ ADD TO BAG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL OVERLAY -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModals(event)">
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <script>
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active-page'));
+            document.getElementById('page-' + pageId).classList.add('active-page');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        let bagItems = [];
+        function addToBag(name, price) {
+            bagItems.push(name + ' ($' + price + ')');
+            document.getElementById('bagCount').textContent = bagItems.length;
+            
+            // Premium custom feedback toast
+            const toast = document.createElement('div');
+            toast.className = 'bag-toast';
+            toast.innerHTML = `<span>SUCCESS: ADDED ${name}</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        function openBagModal() {
+            const overlay = document.getElementById('modalOverlay');
+            document.getElementById('modalContent').innerHTML = `<h2>BAG (${bagItems.length})</h2><ul>` + (bagItems.length ? bagItems.map(i=>`<li>${i}</li>`).join('') : '<li>Your bag is empty.</li>') + `</ul><button class="kinetic-btn primary" style="width:100%; margin-top:1.5rem;" onclick="closeModals()">CLOSE</button>`;
+            overlay.classList.add('active');
+        }
+
+        function closeModals(e) {
+            if(!e || e.target.id === 'modalOverlay' || e.target.tagName === 'BUTTON') document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const parallaxText = document.getElementById('parallaxText');
+            if(parallaxText) {
+                parallaxText.style.transform = `translateY(-50%) translateX(${-scrollY * 0.45}px)`;
+            }
+            const heroGlasses = document.getElementById('heroGlasses');
+            if(heroGlasses) {
+                heroGlasses.style.transform = `translateY(${scrollY * 0.15}px)`;
+            }
+        });
+
+        const heroSection = document.getElementById('heroSection');
+        if(heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                const heroGlasses = document.getElementById('heroGlasses');
+                if(heroGlasses) {
+                    heroGlasses.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+                }
+            });
+        }
+
+        function switchSpec(type, event) {
+            document.querySelectorAll('.spec-pill').forEach(p => p.classList.remove('active'));
+            event.target.classList.add('active');
+            const img = document.getElementById('specImage');
+            const title = document.getElementById('hudTitle');
+            const weight = document.getElementById('hudWeight');
+            
+            if(type === 'alpha') {
+                img.src = 'glasses-1.png';
+                title.textContent = 'MODEL: ALPHA-01';
+                weight.textContent = 'WEIGHT: 24.5G';
+            } else if(type === 'beta') {
+                img.src = 'glasses-2.png';
+                title.textContent = 'MODEL: BETA-02';
+                weight.textContent = 'WEIGHT: 21.0G';
+            } else {
+                img.src = 'glasses-3.png';
+                title.textContent = 'MODEL: OMEGA-03';
+                weight.textContent = 'WEIGHT: 28.2G';
+            }
+        }
+    </script>
+</body>
+</html>
