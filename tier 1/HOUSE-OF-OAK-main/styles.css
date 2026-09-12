@@ -1,0 +1,811 @@
+/* ==========================================================================
+   HOUSE OF OAK — GLOBAL MONTSERRAT SYSTEM
+   Enforces Montserrat across all text, headings, buttons, and links.
+   ========================================================================== */
+
+:root {
+  --font-main: 'Montserrat', Montserrat;
+  
+  /* Ultra-Light Solid Editorial Palette */
+  --bg-main: #F5F2EB;          /* Warm Alabaster */
+  --bg-card: #E8E3DA;          /* Soft Clay / Pale Linen */
+  --bg-accent: #E0D9CC;        /* Warm Oat */
+  --bg-stone: #E6E4DF;         /* Soft Oyster / Faint Architectural Grey */
+  --bg-dark-accent: #2C3531;   /* Deep Forest Pine Accent */
+  --text-dark: #121110;         /* Dark Espresso */
+  --text-light: #F5F2EB;        /* Alabaster Text */
+  --text-muted: #6E685E;       /* Muted Earth */
+  --earth-warm: #8C7A6B;       /* Terracotta/Oak Accent */
+  --border-subtle: rgba(18, 17, 16, 0.08);
+  
+  --header-height: 80px;
+}
+
+/* Force Montserrat globally */
+*,
+*::before,
+*::after,
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button, input, textarea {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
+  overflow-x: hidden;
+}
+
+/* Display Titles */
+.display-title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  color: var(--text-dark);
+}
+
+/* Metadata Subtitles */
+.meta-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Editorial Copy */
+.editorial-copy {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-dark);
+  max-width: 600px;
+}
+
+/* ==========================================================================
+   HOUSE OF OAK — SWISS EDITORIAL DESIGN SYSTEM & STYLESHEET
+   Typography: Strictly 'Helvetica Neue', Helvetica ONLY. No fallbacks.
+   Palette: Warm Alabaster, Soft Clay, Warm Oat, Faint Architectural Grey
+   ========================================================================== */
+
+:root {
+  --font-helvetica: 'Montserrat', Montserrat;
+  
+  /* Ultra-Light Solid Editorial Palette */
+  --bg-main: #F5F2EB;          /* Warm Alabaster */
+  --bg-card: #E8E3DA;          /* Soft Clay / Pale Linen */
+  --bg-accent: #E0D9CC;        /* Warm Oat */
+  --bg-stone: #E6E4DF;         /* Soft Oyster / Faint Architectural Grey */
+  --bg-dark-accent: #2C3531;   /* Deep Forest Pine Accent */
+  --text-dark: #121110;         /* Dark Espresso */
+  --text-light: #F5F2EB;        /* Alabaster Text */
+  --text-muted: #6E685E;       /* Muted Earth */
+  --earth-warm: #8C7A6B;       /* Terracotta/Oak Accent */
+  --border-subtle: rgba(18, 17, 16, 0.08);
+  
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Montserrat !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-Montserrat) !important;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-Montserrat) !important;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-Montserrat) !important;
+}
+
+/* ==========================================================================
+   CONSISTENT HEADER & NAVIGATION
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: rgba(245, 242, 235, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.4s ease;
+}
+
+.brand-logo {
+  font-family: var(--font-Montserrat) !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-dark);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-dark);
+}
+
+.cart-toggle-btn {
+  background: transparent;
+  color: var(--text-dark);
+  border: none;
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: var(--bg-card);
+  transition: background-color 0.3s ease;
+}
+
+.cart-toggle-btn:hover {
+  background-color: var(--earth-warm);
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & COMPACT EDITORIAL SYSTEM
+   ========================================================================== */
+.meta-tag {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.68rem;
+  color: var(--earth-warm);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.display-title {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+
+.editorial-copy {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.section-padding {
+  padding: 70px 60px;
+}
+
+/* Color-Sectioning Utilities */
+.section-accent-stone {
+  background-color: var(--bg-stone);
+  padding: 70px 60px;
+}
+
+.section-accent-oat {
+  background-color: var(--bg-accent);
+  padding: 70px 60px;
+}
+
+.section-accent-card {
+  background-color: var(--bg-card);
+  padding: 70px 60px;
+}
+
+.section-accent-dark {
+  background-color: var(--bg-dark-accent);
+  color: var(--text-light);
+  padding: 80px 60px;
+}
+
+.section-accent-dark .meta-tag {
+  color: #C5A059;
+}
+
+.section-accent-dark .editorial-copy {
+  color: rgba(245, 242, 235, 0.85);
+}
+
+/* ==========================================================================
+   MOTION & ANIMATIONS
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax Hero Wrapper */
+.hero-parallax-wrapper {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-parallax-bg {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 1;
+}
+
+.hero-overlay-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 50px 60px;
+  background: rgba(245, 242, 235, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+}
+
+/* ==========================================================================
+   LAYOUTS, GRIDS & SECTIONS
+   ========================================================================== */
+.editorial-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.editorial-textbox {
+  max-width: 520px;
+}
+
+/* Asymmetric 3-Column Product & Editorial Cards */
+.compact-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.compact-card {
+  background-color: var(--bg-card);
+  padding: 20px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.compact-card:hover {
+  transform: translateY(-5px);
+}
+
+.compact-card-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--bg-main);
+}
+
+.compact-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compact-card:hover .compact-card-img img {
+  transform: scale(1.05);
+}
+
+.compact-card-meta {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.compact-card-meta h3 {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.compact-card-meta p {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.compact-add-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-main);
+  border: none;
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.compact-add-btn:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-main);
+}
+
+/* Infinite Auto-Carousel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 40px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: scrollInfinite 35s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  width: 320px;
+  height: 380px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   INTERACTIVE JOURNAL ISSUE READER MODAL & CART DRAWER
+   ========================================================================== */
+.cart-overlay, .journal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 17, 16, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.cart-overlay.active, .journal-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -460px;
+  width: 420px;
+  height: 100vh;
+  background: var(--bg-main);
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 40px;
+  border-left: 1px solid var(--border-subtle);
+}
+
+.cart-drawer.active {
+  right: 0;
+}
+
+/* Journal Pop-up Modal Box */
+.journal-modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%) scale(0.96);
+  width: 90%;
+  max-width: 860px;
+  max-height: 85vh;
+  background: var(--bg-main);
+  z-index: 2002;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  padding: 50px 60px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.journal-modal-container.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.journal-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.journal-modal-content h2 {
+  font-family: var(--font-helvetica) !important;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 15px 0 25px 0;
+  letter-spacing: -0.02em;
+}
+
+.journal-modal-content p {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.journal-modal-content blockquote {
+  font-family: var(--font-Montserrat) !important;
+  font-style: normal;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-left: 2px solid var(--earth-warm);
+  padding-left: 20px;
+  margin: 30px 0;
+  color: var(--earth-warm);
+}
+
+/* ==========================================================================
+   COMPACT HALF-SIZED FOOTER
+   ========================================================================== */
+footer {
+  padding: 45px 60px 25px 60px;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-col ul a {
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.footer-col ul a:hover {
+  color: var(--text-dark);
+}
+
+.footer-bottom {
+  padding-top: 18px;
+  border-top: 1px solid rgba(18, 17, 16, 0.08);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-Montserrat) !important;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+@media(max-width: 1024px) {
+  header, footer, .section-padding, .section-accent-stone, .section-accent-oat, .section-accent-card, .section-accent-dark { padding-left: 25px; padding-right: 25px; }
+  .editorial-row { grid-template-columns: 1fr; gap: 30px; }
+  .compact-grid-3col { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+  .display-title { font-size: 2.8rem; }
+  .journal-modal-container { padding: 35px 25px; width: 95%; }
+}
+
+
+/* ==========================================================================
+   HOUSE OF OAK — ENHANCED DEEP BEIGE FOOTER
+   ========================================================================== */
+
+footer {
+  background-color: #D8D0C5 !important; /* Deeper warm editorial beige */
+  color: #121110 !important;
+  padding: 60px 5% 30px 5%;
+  border-top: 1px solid rgba(18, 17, 16, 0.12);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #121110;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #4A443D !important; /* Darker muted earth link color for high contrast */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #121110 !important;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(18, 17, 16, 0.1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6E685E;
+}
+
+
+
+
+
+
+
+
+/* Fix Image Ratio & Prevent Squishing */
+.compact-card-img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.compact-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Ensure Grid Cards Contain Content & Don't Get Clipped */
+.compact-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.compact-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-main, #ffffff);
+  padding: 16px;
+  height: auto;
+  min-height: 100%;
+}
+
+/* Adjust Section Padding so Content Fits Screen */
+.section-accent-stone {
+  padding-bottom: 120px !important;
+}
+
+/* Typography Consistency */
+.display-title {
+  font-family: var(--font-helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+
+
+/* Responsive Grid: Auto-adjusts columns based on available width */
+.compact-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Card Container */
+.compact-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-main, #ffffff);
+  border: 1px solid rgba(18, 17, 16, 0.08);
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image Wrapper aspect-ratio (stops vertical stretching) */
+.compact-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto !important;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-card, #f4f3ef);
+}
+
+.compact-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Card Content Spacing */
+.compact-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Typography Overrides */
+.display-title {
+  font-family: var(--font-helvetica, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}

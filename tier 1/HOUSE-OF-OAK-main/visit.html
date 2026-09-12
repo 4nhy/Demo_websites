@@ -1,0 +1,143 @@
+<!-- ==========================================================================
+     HOUSE OF OAK — VISIT PAGE (WITH GOOGLE MAPS EMBEDS & END CAROUSEL)
+     ========================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit — HOUSE OF OAK</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand-logo">HOUSE OF OAK</a>
+    <ul class="nav-links">
+      <li><a href="collection.html">Collection</a></li>
+      <li><a href="craft.html">Craft</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="visit.html" class="active">Visit</a></li>
+    </ul>
+  </header>
+
+  <section class="section-padding" style="padding-bottom: 30px;">
+    <div class="reveal-on-scroll">
+      <span class="meta-tag">( SHOWROOMS &amp; PRIVATE VIEWINGS )</span>
+      <h1 class="display-title">Galleries</h1>
+      <p class="editorial-copy" style="max-width: 600px;">
+        Experience our monolithic architectural furniture objects firsthand at our permanent gallery spaces in Helsinki and Copenhagen. Private appointments available.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-accent-stone" style="padding-top: 40px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;" class="reveal-on-scroll">
+      <div>
+        <!-- HELSINKI SHOWROOM -->
+        <div style="margin-bottom:35px; padding-bottom:30px; border-bottom:1px solid rgba(18,17,16,0.1);">
+          <span class="meta-tag">( NORDIC FLAGSHIP )</span>
+          <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.02em;">Aleksanterinkatu 14</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">00170 Helsinki, Finland</p>
+          <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 4px;">Tuesday – Saturday: 10:00 – 18:00</p>
+          <div style="width:100%; height:200px; margin-top:16px; background:#ddd; border:1px solid var(--border-subtle);">
+            <iframe title="Helsinki Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8878564177218!2d24.950269!3d60.169123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bce78546b43%3A0xb3a83015b6d9e03f!2sAleksanterinkatu%2014%2C%2000170%20Helsinki%2C%20Finland!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- COPENHAGEN SHOWROOM -->
+        <div>
+          <span class="meta-tag">( SCANDINAVIAN SHOWROOM )</span>
+          <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.02em;">Bredgade 32</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">1260 København, Denmark</p>
+          <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 4px;">Wednesday – Sunday: 11:00 – 17:00</p>
+          <div style="width:100%; height:200px; margin-top:16px; background:#ddd; border:1px solid var(--border-subtle);">
+            <iframe title="Copenhagen Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.261299879482!2d12.587843!3d55.684128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253187aef2b8b%3A0x6334a11f262f3f4e!2sBredgade%2032%2C%201260%20K%C3%B8benhavn%2C%20Denmark!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div style="background: var(--bg-card); padding: 40px; border:1px solid var(--border-subtle);">
+        <span class="meta-tag">( CONCIERGE SERVICE )</span>
+        <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.02em;">Reserve Viewing</h2>
+        <form onsubmit="event.preventDefault(); alert('Viewing reservation successfully confirmed. Our concierge will contact you shortly.');">
+          <div style="margin-bottom: 18px;">
+            <label style="display:block; font-size:0.68rem; text-transform:uppercase; margin-bottom:6px; color:var(--text-muted); font-weight:600; letter-spacing:0.12em;">Full Name</label>
+            <input type="text" required style="width:100%; padding:12px; background:var(--bg-main); border:1px solid rgba(18,17,16,0.1); color:var(--text-dark); font-family:var(--font-helvetica); outline:none;">
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="display:block; font-size:0.68rem; text-transform:uppercase; margin-bottom:6px; color:var(--text-muted); font-weight:600; letter-spacing:0.12em;">Email Address</label>
+            <input type="email" required style="width:100%; padding:12px; background:var(--bg-main); border:1px solid rgba(18,17,16,0.1); color:var(--text-dark); font-family:var(--font-helvetica); outline:none;">
+          </div>
+          <div style="margin-bottom: 24px;">
+            <label style="display:block; font-size:0.68rem; text-transform:uppercase; margin-bottom:6px; color:var(--text-muted); font-weight:600; letter-spacing:0.12em;">Preferred Gallery Location</label>
+            <select style="width:100%; padding:12px; background:var(--bg-main); border:1px solid rgba(18,17,16,0.1); color:var(--text-dark); font-family:var(--font-helvetica); outline:none;">
+              <option>Helsinki Flagship Gallery</option>
+              <option>Copenhagen Showroom</option>
+            </select>
+          </div>
+          <button type="submit" class="compact-add-btn" style="background:var(--text-dark); color:var(--bg-main); padding:14px;">Submit Reservation Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVING CAROUSEL BELOW REGISTRATION -->
+  <section class="section-padding" style="padding-top:40px; padding-bottom:40px;">
+    <span class="meta-tag" style="text-align:center; display:block;">( SPATIAL VISUAL ARCHIVE )</span>
+    <div class="carousel-container reveal-on-scroll">
+      <div class="carousel-track">
+        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Gallery Interior"></div>
+        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Sculptural Furniture"></div>
+        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Gallery Detail"></div>
+        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Oak Bench Detail"></div>
+        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Gallery Interior"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>HOUSE OF OAK</h4>
+        <p style="color: var(--text-muted); font-size: 0.8rem; max-width: 320px; line-height: 1.5;">Architectural furniture objects created with Scandinavian restraint and structural mass.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="craft.html">Craft</a></li>
+          <li><a href="about.html">About Studio</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Galleries</h4>
+        <ul>
+          <li><a href="visit.html">Helsinki Showroom</a></li>
+          <li><a href="visit.html">Copenhagen Gallery</a></li>
+          <li><a href="visit.html">Private Viewing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Inquiries</h4>
+        <ul>
+          <li><a href="mailto:concierge@houseofoak.com">Concierge Email</a></li>
+          <li><a href="visit.html">Press Archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 House of Oak. All rights reserved.</span>
+      <span>Showroom Reservations</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
