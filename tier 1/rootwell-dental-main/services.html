@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rootwell Dental — Services & Menu of Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">Rootwell</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active-link">Services</a>
+                <a href="about.html">About  Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-btn">Book Visit</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-header">
+                <h2>Menu of Care</h2>
+                <p style="text-transform: none;">Click any treatment below to review our customized approach, duration, and patient comfort standards.</p>
+            </div>
+
+            <!-- FULL WIDTH STACKED SERVICES WITH INDIVIDUAL IMAGES -->
+            <div class="services-stack-full">
+                
+                <!-- SERVICE 1 -->
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-row-main">
+                        <h3>General Checkups & Preventive Cleaning</h3>
+                        <span class="service-toggle">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-grid-inner">
+                            <div>
+                                <p style="text-transform: none;">Our foundation. A thorough, gentle evaluation of your overall oral health accompanied by a meticulous cleaning designed to preserve natural enamel integrity.</p>
+                                <div class="service-meta">Duration: 50 minutes • Zero-anxiety protocol</div>
+                            </div>
+                            <div class="service-inline-img">
+                                <img src="images/service1.jpg" alt="General Checkups">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVICE 2 -->
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-row-main">
+                        <h3>Conservative Cosmetic Enhancements</h3>
+                        <span class="service-toggle">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-grid-inner">
+                            <div>
+                                <p style="text-transform: none;">Subtle, balanced aesthetic treatments focused on harmony and proportion rather than artificial over-whitening.</p>
+                                <div class="service-meta">Custom Consultations • Natural aesthetic finish</div>
+                            </div>
+                            <div class="service-inline-img">
+                                <img src="images/service2.jpg" alt="Conservative Cosmetic Enhancements">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVICE 3 -->
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-row-main">
+                        <h3>Micro-Endodontic Therapy</h3>
+                        <span class="service-toggle">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-grid-inner">
+                            <div>
+                                <p style="text-transform: none;">Painless, highly precise care utilizing advanced microscopic optics to save your natural tooth structure comfortably.</p>
+                                <div class="service-meta">Painless localized anesthesia • Single-visit options</div>
+                            </div>
+                            <div class="service-inline-img">
+                                <img src="images/service3.jpg" alt="Micro-Endodontic Therapy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVICE 4 -->
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-row-main">
+                        <h3>Enamel-Safe Brightening</h3>
+                        <span class="service-toggle">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-grid-inner">
+                            <div>
+                                <p style="text-transform: none;">Botanical-infused professional formulas engineered to dramatically minimize post-treatment sensitivity.</p>
+                                <div class="service-meta">In-office chairside or take-home customized kits</div>
+                            </div>
+                            <div class="service-inline-img">
+                                <img src="images/service4.jpg" alt="Enamel-Safe Brightening">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVICE 5 -->
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-row-main">
+                        <h3>Pediatric Family Dentistry</h3>
+                        <span class="service-toggle">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-grid-inner">
+                            <div>
+                                <p style="text-transform: none;">Gentle, patient introductory sessions for children that cultivate lifelong positive oral hygiene habits without fear.</p>
+                                <div class="service-meta">Family appointment booking blocks available</div>
+                            </div>
+                            <div class="service-inline-img">
+                                <img src="images/service5.jpg" alt="Pediatric Family Dentistry">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Rootwell</h2>
+                <p>An unhurried neighborhood dental practice focused on preventive wellness and patient serenity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About & Team</a>
+                <a href="contact.html">Contact & Booking</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Journal</a>
+                <p style="margin-top: 1.5rem;">© 2026 Rootwell Dental Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>428 Orchard Mill Way, Suite 100, Portland, OR</span>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

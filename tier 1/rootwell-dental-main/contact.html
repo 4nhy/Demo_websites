@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rootwell Dental — Contact & Reserve Visit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">Rootwell</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Team</a>
+                <a href="contact.html" class="active-link">Contact</a>
+                <a href="contact.html" class="nav-btn">Book Visit</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="contact-layout">
+                <div>
+                    <h2>Reserve a Visit</h2>
+                    <br>
+                    <p style="text-transform: none;">Let us know what care you need. If you experience dental anxiety, mention it in your notes—we customize every single session to match your personal comfort speed.</p>
+                    <br><br>
+                    <h3>Practice Location</h3>
+                    <p style="margin-top: 0.5rem; text-transform: none;">428 Orchard Mill Way, Suite 100<br>Portland, OR 97201</p>
+                    <br>
+                    <h3>Direct Inquiries</h3>
+                    <p style="margin-top: 0.5rem; text-transform: none;">hello@rootwelldental.com<br>(555) 234-8901</p>
+
+                    <!-- Google Maps Window Embed -->
+                    <div class="map-window">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4578129321!2d-122.67648162347715!3d45.51523213038676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a04c10a40f3%3A0xc3b8393c3330cb97!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div>
+                    <form id="bookingForm" class="smooth-form">
+                        <div class="field-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="jane@example.com" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="service">Reason for Visit</label>
+                            <select id="service" required>
+                                <option value="">Select treatment category...</option>
+                                <option value="checkup">General Checkup & Preventive Cleaning</option>
+                                <option value="cosmetic">Conservative Cosmetic Consult</option>
+                                <option value="rootcanal">Micro-Endodontic Therapy</option>
+                                <option value="emergency">Urgent Care Evaluation</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="notes">Comfort Notes or Specific Anxieties (Optional)</label>
+                            <textarea id="notes" rows="3" placeholder="Let us know how we can make your visit relaxing..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Submit Appointment Request</button>
+                    </form>
+
+                    <div id="successBox" class="success-message">
+                        <h3>Request Received Successfully</h3>
+                        <br>
+                        <p style="text-transform: none;">Thank you. A member of our patient coordinator team will reach out within 2 business hours to confirm your exact time slot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Rootwell</h2>
+                <p>An unhurried neighborhood dental practice focused on preventive wellness and patient serenity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Team</a>
+                <a href="contact.html">Contact & Booking</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Journal</a>
+                <p style="margin-top: 1.5rem;">© 2026 Rootwell Dental Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>428 Orchard Mill Way, Suite 100, Portland, OR</span>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
