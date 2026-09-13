@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b1410;
+  --panel: #131f17;
+  --panel-raised: #1b2a1f;
+  --green: #7c8b6f;
+  --green-light: #9cad86;
+  --gold: #c9a227;
+  --gold-bright: #e0be4a;
+  --cream: #f3eee1;
+  --cream-dim: #b9b6aa;
+  --mint: #e7ede2; /* light panel bg — retired, no component references it anymore */
+  --danger: #c1503f; /* invalid-field borders — a warm rust, not a screaming red, to
+                         stay in the earthy palette */
+  --danger-bright: #e08874; /* error text — passes 4.5:1+ on bg/panel/panel-raised */
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-raised: var(--panel-raised);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-mint: var(--mint);
+  --color-danger: var(--danger);
+  --color-danger-bright: var(--danger-bright);
+  --font-display: var(--font-erode);
+  --font-body: var(--font-switzer);
+  --font-sans: var(--font-switzer);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* Sitewide focus indicator — gold, per DIRECTION.md's own token comment
+   ("accent, CTAs, focus") which nothing had actually wired up before.
+   Covers nav links, buttons, cards, and form fields alike so removing a
+   browser default (e.g. an input's `focus:outline-none`) never leaves an
+   element with no visible focus state. */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+/* Locked vertical-rhythm token — every section uses this, no exceptions.
+   160px desktop / 96px mobile. A className, not a Tailwind py-* utility,
+   specifically so there's one place to audit instead of N scattered
+   arbitrary values drifting apart per section. */
+.section-pad {
+  padding-block: 96px;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: 160px;
+  }
+}
+
+/* Utility: reveal-on-scroll targets start hidden via inline style set by JS,
+   this class only exists so no-JS / crawler content is never hidden. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* thin gold scrollbar, webkit only, purely cosmetic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-raised);
+  border-radius: 999px;
+}
