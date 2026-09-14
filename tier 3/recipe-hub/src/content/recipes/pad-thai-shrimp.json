@@ -1,0 +1,41 @@
+{
+  "slug": "pad-thai-shrimp",
+  "title": "Pad Thai with Shrimp",
+  "cuisine": "Thai",
+  "diets": ["gluten-free", "dairy-free"],
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "totalMinutes": 30,
+  "servings": 2,
+  "difficulty": "Medium",
+  "description": "A wok-hot toss of soaked rice noodles, shrimp, and egg in a tamarind-and-fish-sauce glaze — balanced sour, salty, and sweet, finished with crushed peanuts and lime.",
+  "image": {
+    "id": "1746973645769-c11eb0a81025",
+    "alt": "Pad thai noodles on a dark plate with lime and cilantro, moody light",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/delicious-pad-thai-with-fresh-herbs-and-lime-EDoy1yjPLV0" }
+  },
+  "ingredients": [
+    "200g flat rice noodles (banh pho, 5mm)",
+    "3 tbsp tamarind paste",
+    "3 tbsp fish sauce",
+    "2 tbsp palm sugar (or brown sugar)",
+    "2 tbsp vegetable oil",
+    "12 large shrimp, peeled and deveined",
+    "2 cloves garlic, minced",
+    "2 eggs, lightly beaten",
+    "150g bean sprouts, divided",
+    "3 spring onions, cut into 4cm lengths",
+    "1/4 cup roasted peanuts, roughly crushed",
+    "1 lime, cut into wedges"
+  ],
+  "steps": [
+    "Soak the rice noodles in warm water for 20–30 minutes, until pliable but still firm. Drain.",
+    "Whisk the tamarind paste, fish sauce, and palm sugar together — this is the pad thai sauce.",
+    "Heat the oil in a wok over high heat. Add the shrimp and garlic, stir-frying 1–2 minutes until the shrimp turn pink. Push to one side.",
+    "Pour the eggs into the cleared space and scramble briefly, then mix through the shrimp.",
+    "Add the drained noodles and the sauce. Toss constantly for 2–3 minutes until the noodles soften and absorb the sauce.",
+    "Add two-thirds of the bean sprouts and the spring onions; toss for 1 more minute.",
+    "Plate topped with the remaining bean sprouts, crushed peanuts, and lime wedges to squeeze over."
+  ],
+  "note": "Use fish sauce and tamarind paste labeled gluten-free — some brands add wheat-based fillers."
+}

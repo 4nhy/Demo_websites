@@ -1,0 +1,46 @@
+{
+  "slug": "butter-chicken",
+  "title": "Butter Chicken (Murgh Makhani)",
+  "cuisine": "Indian",
+  "diets": ["gluten-free"],
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "totalMinutes": 65,
+  "servings": 4,
+  "difficulty": "Hard",
+  "description": "Yogurt-marinated chicken charred under high heat, then simmered in a butter-and-cashew tomato sauce until it turns rich, orange, and impossible to stop eating with naan.",
+  "image": {
+    "id": "1742599361539-f096753d1100",
+    "alt": "Butter chicken curry with mint garnish, served with rice",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/delicious-indian-chicken-curry-and-rice-ready-to-eat-gwUA_pHaOYY" }
+  },
+  "ingredients": [
+    "700g boneless chicken thighs, cut into large chunks",
+    "1/2 cup plain yogurt",
+    "1 tbsp lemon juice",
+    "2 tsp ground cumin",
+    "2 tsp Kashmiri chili powder, divided",
+    "1 tsp garam masala, divided",
+    "4 tbsp unsalted butter, divided",
+    "1 onion, chopped",
+    "4 cloves garlic, minced",
+    "1 tbsp ginger, minced",
+    "400g canned crushed tomatoes",
+    "1/4 cup raw cashews",
+    "1 cup water",
+    "1/2 cup heavy cream",
+    "1 tbsp sugar",
+    "Fine sea salt",
+    "Chopped cilantro, to serve"
+  ],
+  "steps": [
+    "Whisk the yogurt, lemon juice, cumin, half the chili powder, and half the garam masala together. Toss with the chicken and marinate at least 30 minutes (overnight improves it).",
+    "Sear the marinated chicken in a very hot, lightly oiled pan or under a broiler, 3–4 minutes per side, until charred in spots but not cooked through. Set aside.",
+    "Melt 2 tbsp butter in a pot over medium heat. Cook the onion 6–7 minutes until soft and golden.",
+    "Add the garlic and ginger, cooking 1 minute, then add the crushed tomatoes, cashews, remaining chili powder, and water. Simmer 15 minutes.",
+    "Blend the sauce until completely smooth, then return it to the pot.",
+    "Stir in the seared chicken and simmer 8–10 minutes until cooked through.",
+    "Stir in the cream, remaining garam masala, sugar, and remaining 2 tbsp butter. Season with salt and simmer 2 minutes. Finish with cilantro."
+  ],
+  "note": "Char the chicken hard before it goes into the sauce — that browning is the difference between butter chicken and plain tomato-creamed chicken."
+}

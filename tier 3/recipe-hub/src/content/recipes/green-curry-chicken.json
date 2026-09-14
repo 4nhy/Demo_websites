@@ -1,0 +1,40 @@
+{
+  "slug": "green-curry-chicken",
+  "title": "Green Curry with Chicken",
+  "cuisine": "Thai",
+  "diets": ["gluten-free", "dairy-free"],
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "totalMinutes": 45,
+  "servings": 4,
+  "difficulty": "Medium",
+  "description": "Green curry paste fried in coconut cream until the oil separates out — the step that actually builds flavor — then simmered with chicken, Thai eggplant, and basil.",
+  "image": {
+    "id": "1532384159185-16f0bcfd5a5b",
+    "alt": "Thai green curry with chicken and vegetables in a dark bowl on a wooden table",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/chicken-curry-with-spices-dish-aSg7LVDhubM" }
+  },
+  "ingredients": [
+    "400ml full-fat coconut milk, unshaken",
+    "3–4 tbsp green curry paste",
+    "500g boneless chicken thighs, sliced",
+    "150g Thai eggplant, quartered (or 1 regular eggplant, cubed)",
+    "1 red bell pepper, sliced",
+    "2 tbsp fish sauce",
+    "1 tbsp palm sugar",
+    "1 cup chicken stock",
+    "4 kaffir lime leaves, torn",
+    "1 cup Thai basil leaves",
+    "1–2 red chilies, sliced, for garnish",
+    "Jasmine rice, to serve"
+  ],
+  "steps": [
+    "Spoon the thick cream from the top of the unshaken coconut milk into a wok or deep pan over medium heat.",
+    "Fry the curry paste in the coconut cream for 3–4 minutes, stirring often, until fragrant and the oil begins to separate at the edges.",
+    "Add the chicken and cook 3–4 minutes, turning to coat in the paste.",
+    "Pour in the remaining coconut milk and the stock. Add the eggplant and lime leaves, and simmer 10 minutes.",
+    "Add the bell pepper, fish sauce, and palm sugar. Simmer 5–8 minutes more until the chicken is cooked through and vegetables are tender.",
+    "Stir in the Thai basil off the heat until just wilted. Garnish with sliced chilies and serve over jasmine rice."
+  ],
+  "note": "Don't shake the coconut milk can — separating the cream is what lets you fry the paste properly."
+}

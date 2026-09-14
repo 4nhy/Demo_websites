@@ -1,0 +1,32 @@
+{
+  "slug": "cacio-e-pepe",
+  "title": "Cacio e Pepe",
+  "cuisine": "Italian",
+  "diets": ["vegetarian"],
+  "prepMinutes": 5,
+  "cookMinutes": 15,
+  "totalMinutes": 20,
+  "servings": 2,
+  "difficulty": "Easy",
+  "description": "Rome's three-ingredient pasta: cracked black pepper bloomed in a dry pan, then emulsified with Pecorino Romano and starchy pasta water until it turns glossy, not clumpy.",
+  "image": {
+    "id": "1626300006988-42a927fd80ee",
+    "alt": "Bowtie pasta with black pepper and pecorino in a dark ceramic bowl, moody light",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/white-and-brown-ceramic-bowl-with-noodles-OUEtL0O1GeM" }
+  },
+  "ingredients": [
+    "200g tonnarelli or spaghetti",
+    "1 tsp whole black peppercorns, coarsely cracked",
+    "100g Pecorino Romano, finely grated, plus extra to serve",
+    "Fine sea salt, for the pasta water"
+  ],
+  "steps": [
+    "Bring a pot of water to a boil and salt it lightly — go easy, since Pecorino brings plenty of salt on its own.",
+    "Toast the cracked peppercorns in a dry skillet over medium heat for 1–2 minutes until fragrant, then add a ladle of pasta water and simmer gently to infuse.",
+    "Cook the pasta 2 minutes short of the package time. Reserve 1 cup of pasta water, then drain.",
+    "Off the heat, add the pasta to the skillet with a splash more pasta water.",
+    "Add the Pecorino a handful at a time, tossing constantly and adding pasta water as needed, until the sauce clings in a glossy emulsion with no dry clumps and no soupy pool.",
+    "Plate immediately with extra cracked pepper and Pecorino."
+  ],
+  "note": "Take the skillet off the heat before adding cheese — Pecorino seizes into strings above about 70°C."
+}

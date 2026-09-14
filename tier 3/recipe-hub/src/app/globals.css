@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+:root {
+  --bone: #f3ebdd;
+  --paper: #fffdf8;
+  --ink: #2a211a;
+  --charcoal: #1a120c;
+  /* Darkened ~16% from the original #C9591F — same hue/ratio, so the
+     saturation reads the same, but it now clears 4.5:1 both as a white-text
+     button fill and as text on bone/paper. */
+  --terracotta: #a94a19;
+  --terracotta-ink: #ffffff;
+  /* Lighter sibling, for terracotta *text* on charcoal/espresso only (the
+     darkened primary above fails there — a single value can't satisfy
+     white-on-fill, text-on-light, and text-on-dark all at once). */
+  --terracotta-bright: #d2641f;
+  --olive: #52672f;
+  --line: #e2d4ba;
+  /* Solid replacement for the old text-ink/40 · /50 · /60 opacity steps —
+     those blended too light against bone/paper to clear 4.5:1. One value,
+     tuned against the lighter of the two (paper), used wherever secondary
+     text sits on a light ground. */
+  --muted: #6b5f52;
+}
+
+@theme inline {
+  --color-bone: var(--bone);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-ink: var(--terracotta-ink);
+  --color-terracotta-bright: var(--terracotta-bright);
+  --color-olive: var(--olive);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9375rem;
+  --text-2xl: 2.4375rem;
+  --text-3xl: 3.5rem;
+  --text-4xl: 4.25rem;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+h1,
+h2 {
+  line-height: 1.15;
+}
+
+/* 3D tilt card — perspective on the wrapper, rotation applied to the inner
+   element via inline style/JS so the shadow layer stays flat. */
+.tilt-card {
+  perspective: 1000px;
+}
+
+.tilt-card__inner {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+::selection {
+  background: var(--terracotta);
+  color: var(--terracotta-ink);
+}
+
+/* Reveal-on-scroll: elements start hidden, JS flips [data-revealed] once in view. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+[data-reveal][data-revealed="true"] {
+  animation: reveal 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+}
+
+/* Small pill badge — time / difficulty / diet. Replaces the v1 mono spec-tag. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge--neutral {
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.badge--terracotta {
+  background: var(--terracotta);
+  color: var(--terracotta-ink);
+}
+
+.badge--olive {
+  background: color-mix(in srgb, var(--olive) 16%, var(--paper));
+  color: var(--olive);
+}
+
+/* Consistent, art-directed grade applied to every curated photo — pulls the
+   handful of brighter source photos toward Option B's moody dark-wood
+   tablescape mood so the set reads as one shoot. */
+.graded-photo {
+  filter: contrast(1.08) saturate(0.92) brightness(0.93);
+}
+
+/* Horizontal carousel — snap scrolling, no scrollbar chrome. */
+.carousel-track {
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+}
+
+/* Kinetic headline: words start masked below their own line, JS rises them
+   into place on first scroll-into-view. */
+.kinetic-word {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Kinetic body: a single clip-path wipe, lighter than the headline stagger. */
+.kinetic-body {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* Type-on characters for the Cook's Notes margin quotes. */
+.type-on-char {
+  opacity: 0;
+  white-space: pre-wrap;
+}
+
+.type-on-caret {
+  display: inline-block;
+  color: var(--terracotta);
+  animation: caret-blink 0.9s step-end infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-word {
+    opacity: 1;
+    transform: none;
+  }
+  .kinetic-body {
+    clip-path: none;
+  }
+  .type-on-char {
+    opacity: 1;
+  }
+  .type-on-caret {
+    display: none;
+  }
+}

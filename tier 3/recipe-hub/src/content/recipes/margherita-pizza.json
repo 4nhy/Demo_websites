@@ -1,0 +1,36 @@
+{
+  "slug": "margherita-pizza",
+  "title": "Margherita Pizza",
+  "cuisine": "Italian",
+  "diets": ["vegetarian"],
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "totalMinutes": 35,
+  "servings": 4,
+  "difficulty": "Medium",
+  "description": "A hot oven and restraint are the whole trick — San Marzano tomatoes crushed by hand, fresh mozzarella torn (never sliced), and basil added after the bake so it stays green.",
+  "image": {
+    "id": "1734215816956-2fa6c30b8d1d",
+    "alt": "Close-up of a pizza baking in a dark oven, dramatic golden light",
+    "credit": { "name": "Salah Ait Mokhtar", "url": "https://unsplash.com/photos/a-close-up-of-a-pizza-in-the-oven-Fc9QLjPQhEI" }
+  },
+  "ingredients": [
+    "500g pizza dough (store-bought or homemade), at room temperature",
+    "200g canned San Marzano tomatoes, crushed by hand, drained of excess liquid",
+    "1 clove garlic, minced",
+    "250g fresh mozzarella, torn into rough pieces and blotted dry",
+    "2 tbsp extra-virgin olive oil, plus more for finishing",
+    "Fine sea salt",
+    "A handful of fresh basil leaves",
+    "Semolina or flour, for shaping"
+  ],
+  "steps": [
+    "Put a pizza stone or heavy baking sheet in the oven and preheat to its highest setting (250–290°C) for at least 45 minutes.",
+    "Stir the garlic and a pinch of salt into the crushed tomatoes; don't cook the sauce — it finishes in the oven.",
+    "Stretch the dough on a semolina-dusted surface into a 30cm round, working from the center out and leaving a puffier rim.",
+    "Spread the tomato sauce thinly, leaving a 2cm border. Scatter the torn mozzarella evenly.",
+    "Slide the pizza onto the hot stone. Bake 6–9 minutes, until the crust is blistered and the cheese is bubbling with brown spots.",
+    "Remove, drizzle with olive oil, scatter basil leaves, and slice immediately."
+  ],
+  "note": "Blot the mozzarella dry before topping — wet cheese steams instead of browning and leaves the crust soggy."
+}

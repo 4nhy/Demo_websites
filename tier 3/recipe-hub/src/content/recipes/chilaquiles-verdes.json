@@ -1,0 +1,40 @@
+{
+  "slug": "chilaquiles-verdes",
+  "title": "Chilaquiles Verdes",
+  "cuisine": "Mexican",
+  "diets": ["vegetarian", "gluten-free"],
+  "prepMinutes": 10,
+  "cookMinutes": 15,
+  "totalMinutes": 25,
+  "servings": 3,
+  "difficulty": "Easy",
+  "description": "Fried tortilla chips simmered briefly in a blended tomatillo-serrano salsa until just softened at the edges but still holding a little bite, then piled with crema, queso fresco, and a fried egg.",
+  "image": {
+    "id": "1780283210587-29e03acf30d9",
+    "alt": "Chilaquiles verdes topped with crumbled cheese, crema, and a fried egg",
+    "credit": { "name": "Roger Ce", "url": "https://unsplash.com/photos/traditional-mexican-chilaquiles-with-chicken-cheese-and-crispy-onions-O7qAmsvcmBk" }
+  },
+  "ingredients": [
+    "450g tomatillos, husked and rinsed",
+    "2 serrano chilies (or 1 jalapeño), stemmed",
+    "1/2 white onion, roughly chopped, divided",
+    "2 cloves garlic",
+    "1/4 cup cilantro, plus more to serve",
+    "2 tbsp vegetable oil, plus more for frying",
+    "200g corn tortilla chips (or 8 corn tortillas, cut into wedges and fried)",
+    "1/2 cup vegetable stock",
+    "3 eggs",
+    "1/3 cup crema or sour cream",
+    "1/2 cup queso fresco, crumbled",
+    "Fine sea salt"
+  ],
+  "steps": [
+    "Boil the tomatillos and chilies in water for 8–10 minutes, until the tomatillos turn dull olive-green and soften. Drain.",
+    "Blend the tomatillos, chilies, half the onion, garlic, cilantro, and vegetable stock until smooth. Season with salt.",
+    "If frying your own tortillas: fry the wedges in oil until golden and crisp, then drain on paper towels.",
+    "Heat 2 tbsp oil in a large skillet, pour in the salsa verde, and simmer 5 minutes until slightly thickened.",
+    "Add the tortilla chips and toss gently to coat, cooking 1–2 minutes so they soften slightly but keep some crunch. Remove from heat.",
+    "Fry the eggs separately to your liking. Top the chilaquiles with the fried eggs, crema, queso fresco, remaining onion, and cilantro."
+  ],
+  "note": "Add the chips off the heat or just before serving — they go from crisp to mush within a couple of minutes in the hot salsa."
+}

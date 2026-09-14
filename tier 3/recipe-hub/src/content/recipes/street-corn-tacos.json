@@ -1,0 +1,38 @@
+{
+  "slug": "street-corn-tacos",
+  "title": "Street Corn Tacos",
+  "cuisine": "Mexican",
+  "diets": ["vegetarian", "gluten-free"],
+  "prepMinutes": 10,
+  "cookMinutes": 15,
+  "totalMinutes": 25,
+  "servings": 4,
+  "difficulty": "Easy",
+  "description": "Elote's char-grilled corn, crema, cotija, and chili lime, folded into warm corn tortillas instead of served on the cob.",
+  "image": {
+    "id": "1783451730116-7e9c994850a4",
+    "alt": "Tacos with dipping sauce on a dark table, warm low light",
+    "credit": { "name": "Angelica Hasbon", "url": "https://unsplash.com/photos/four-delicious-tacos-and-dipping-sauce-on-a-dark-table-pxq4ESv_Csk" }
+  },
+  "ingredients": [
+    "4 ears corn, husked",
+    "1 tbsp vegetable oil",
+    "12 small corn tortillas",
+    "1/3 cup Mexican crema (or sour cream thinned with a little lime juice)",
+    "3/4 cup cotija cheese, crumbled",
+    "1/2 tsp chili powder, plus more to serve",
+    "1/4 tsp cayenne pepper",
+    "1 clove garlic, minced",
+    "2 limes: 1 juiced, 1 cut into wedges",
+    "1/4 cup chopped cilantro",
+    "Fine sea salt"
+  ],
+  "steps": [
+    "Rub the corn with oil and grill over high heat (or char in a dry cast-iron pan), turning every 2 minutes, until blistered on all sides, about 10 minutes total. Let cool slightly, then cut the kernels off the cob.",
+    "Stir the crema, half the cotija, chili powder, cayenne, garlic, and lime juice into the warm corn kernels. Season with salt.",
+    "Warm the tortillas directly over a flame or in a dry skillet until lightly charred and pliable.",
+    "Fill each tortilla with the corn mixture.",
+    "Top with the remaining cotija, cilantro, and an extra pinch of chili powder. Serve with lime wedges."
+  ],
+  "note": "Char the corn hard — the blistered kernels are most of the flavor here, more than any of the seasonings."
+}

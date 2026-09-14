@@ -1,0 +1,38 @@
+{
+  "slug": "som-tam",
+  "title": "Som Tam (Green Papaya Salad)",
+  "cuisine": "Thai",
+  "diets": ["vegan", "gluten-free", "dairy-free"],
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "totalMinutes": 20,
+  "servings": 2,
+  "difficulty": "Easy",
+  "description": "Shredded raw green papaya pounded in a mortar with chilies, lime, and long beans until it weeps its dressing — sour, hot, and crunchy in the same bite. This version swaps fish sauce for soy and mushroom seasoning to keep it fully plant-based.",
+  "image": {
+    "id": "1600271801401-65fe5f623a9a",
+    "alt": "Shredded vegetable salad with peanuts in a dark bowl on stone",
+    "credit": { "name": "Abhishek Hajare", "url": "https://unsplash.com/photos/vegetable-salad-in-black-bowl-EljLLnd7Mow" }
+  },
+  "ingredients": [
+    "2 cups shredded green (unripe) papaya",
+    "2 cloves garlic",
+    "2–4 Thai bird's eye chilies, to taste",
+    "6 cherry tomatoes, halved",
+    "1/4 cup long beans, cut into 4cm lengths",
+    "2 tbsp palm sugar",
+    "2 tbsp fresh lime juice",
+    "1 tbsp soy sauce",
+    "1 tsp mushroom seasoning powder (or an extra pinch of salt)",
+    "2 tbsp roasted peanuts, roughly crushed"
+  ],
+  "steps": [
+    "In a large mortar, pound the garlic and chilies to a coarse paste.",
+    "Add the palm sugar and pound to dissolve, then add the long beans and bruise them lightly.",
+    "Add the tomatoes and bruise just enough to release their juice — don't pulverize them.",
+    "Add the shredded papaya in two batches, bruising and turning with a spoon between each addition (not pounding hard, or it turns mushy).",
+    "Add the lime juice, soy sauce, and mushroom seasoning. Toss and taste — it should hit sour, salty, sweet, and hot all at once.",
+    "Transfer to a plate and scatter with crushed peanuts."
+  ],
+  "note": "Choose papaya that's fully green and firm — a ripening papaya turns the salad soft and sweet instead of crisp."
+}

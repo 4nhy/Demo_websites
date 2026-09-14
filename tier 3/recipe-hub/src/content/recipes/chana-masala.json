@@ -1,0 +1,43 @@
+{
+  "slug": "chana-masala",
+  "title": "Chana Masala",
+  "cuisine": "Indian",
+  "diets": ["vegan", "gluten-free", "dairy-free"],
+  "prepMinutes": 10,
+  "cookMinutes": 25,
+  "totalMinutes": 35,
+  "servings": 4,
+  "difficulty": "Easy",
+  "description": "Chickpeas simmered in a browned onion-tomato masala with a blunt hit of amchoor and garam masala at the end — a weeknight staple that tastes better the longer the spices have to bloom.",
+  "image": {
+    "id": "1788602564560-9bcbf0f9acb6",
+    "alt": "Chana masala chickpea curry with fried bhatura bread, close-up",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/chana-masala-with-fried-bhatura-bread-Idh9dnG2v8w" }
+  },
+  "ingredients": [
+    "2 tbsp vegetable oil",
+    "1 tsp cumin seeds",
+    "1 large onion, finely chopped",
+    "3 cloves garlic, minced",
+    "1 tbsp ginger, minced",
+    "2 tomatoes, finely chopped",
+    "1 tsp ground coriander",
+    "1/2 tsp turmeric",
+    "1 tsp Kashmiri chili powder",
+    "2 x 400g cans chickpeas, drained and rinsed",
+    "1 cup water",
+    "1 tsp amchoor (dried mango powder) or 1 tbsp lemon juice",
+    "1/2 tsp garam masala",
+    "Fine sea salt",
+    "Chopped cilantro, to serve"
+  ],
+  "steps": [
+    "Heat the oil in a pot over medium heat. Add the cumin seeds and let them sizzle for 30 seconds.",
+    "Add the onion and cook 8–10 minutes, stirring often, until deeply golden brown — this is where most of the flavor comes from.",
+    "Stir in the garlic and ginger, cooking 1 minute until fragrant.",
+    "Add the tomatoes, coriander, turmeric, and chili powder. Cook 5–6 minutes, mashing the tomatoes down, until the mixture darkens and the oil separates at the edges.",
+    "Add the chickpeas and water. Simmer 12–15 minutes, mashing a few chickpeas against the side of the pot to thicken the sauce.",
+    "Stir in the amchoor and garam masala. Season with salt and simmer 2 more minutes. Finish with cilantro."
+  ],
+  "note": "Don't rush the onions — pale, undercooked onion is the most common reason a chana masala tastes flat."
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "palak-paneer",
+  "title": "Palak Paneer",
+  "cuisine": "Indian",
+  "diets": ["vegetarian", "gluten-free"],
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "totalMinutes": 35,
+  "servings": 4,
+  "difficulty": "Medium",
+  "description": "Blanched spinach blended to a bright green purée, built into a garlic-ginger masala, and finished with pan-seared cubes of paneer and a swirl of cream.",
+  "image": {
+    "id": "1767114915936-745dd372f1d8",
+    "alt": "Palak paneer curry with spinach and cubes of cheese, served with flatbread",
+    "credit": { "name": "Chetanya Sharma", "url": "https://unsplash.com/photos/a-delicious-indian-meal-with-spinach-and-flatbread-_bAW_ln_-Zs" }
+  },
+  "ingredients": [
+    "350g fresh spinach, washed",
+    "225g paneer, cut into 2cm cubes",
+    "3 tbsp vegetable oil, divided",
+    "1 tsp cumin seeds",
+    "1 onion, finely chopped",
+    "3 cloves garlic, minced",
+    "1 tbsp ginger, minced",
+    "1 green chili, minced",
+    "2 tomatoes, finely chopped",
+    "1 tsp ground coriander",
+    "1/2 tsp turmeric",
+    "1/2 tsp garam masala",
+    "2 tbsp heavy cream, plus more to serve",
+    "Fine sea salt"
+  ],
+  "steps": [
+    "Blanch the spinach in boiling water for 90 seconds, then plunge into ice water. Drain well and blend to a smooth purée with a splash of water.",
+    "Heat 1 tbsp oil in a skillet over medium-high heat. Sear the paneer cubes until golden on a couple of sides, 3–4 minutes. Set aside.",
+    "In the same pan, heat the remaining oil and the cumin seeds until fragrant, about 30 seconds.",
+    "Add the onion and cook 6–7 minutes until soft and golden. Add the garlic, ginger, and green chili, cooking 1 minute more.",
+    "Add the tomatoes, coriander, and turmeric. Cook 5–6 minutes, mashing the tomatoes, until the mixture thickens and the oil separates.",
+    "Stir in the spinach purée and simmer 4–5 minutes. Add the seared paneer and garam masala, and simmer 2 minutes to heat through.",
+    "Stir in the cream, season with salt, and serve with an extra swirl of cream on top."
+  ],
+  "note": "Shock the spinach in ice water right after blanching — it's what keeps the purée bright green instead of drab olive."
+}

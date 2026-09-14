@@ -1,0 +1,39 @@
+{
+  "slug": "carne-asada",
+  "title": "Carne Asada",
+  "cuisine": "Mexican",
+  "diets": ["gluten-free", "dairy-free"],
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "totalMinutes": 35,
+  "servings": 4,
+  "difficulty": "Medium",
+  "description": "Skirt steak marinated in citrus, garlic, and cumin, then seared hard and fast over high heat and sliced against the grain — the marinade tenderizes, the fire does the rest.",
+  "image": {
+    "id": "1704081628926-d64845e7ca93",
+    "alt": "Raw seasoned steak with rosemary and salt on a dark cutting board",
+    "credit": { "name": "Unsplash", "url": "https://unsplash.com/photos/a-piece-of-meat-sitting-on-top-of-a-cutting-board-gfEdWC4cj1A" }
+  },
+  "ingredients": [
+    "900g skirt steak",
+    "1/3 cup orange juice",
+    "2 tbsp lime juice",
+    "1/4 cup olive oil",
+    "4 cloves garlic, minced",
+    "1 jalapeño, minced",
+    "1 tsp ground cumin",
+    "1 tsp fine sea salt",
+    "1/2 tsp black pepper",
+    "1/4 cup chopped cilantro",
+    "Warm tortillas, to serve"
+  ],
+  "steps": [
+    "Whisk the orange juice, lime juice, olive oil, garlic, jalapeño, cumin, salt, and pepper together.",
+    "Place the steak in a shallow dish, pour the marinade over, and turn to coat. Cover and refrigerate at least 2 hours, up to overnight.",
+    "Remove the steak from the fridge 30 minutes before cooking. Heat a grill or heavy skillet until very hot, then shake excess marinade off the steak.",
+    "Sear the steak 3–4 minutes per side for medium-rare — skirt steak is thin, so watch it closely.",
+    "Rest the steak 5–10 minutes, then slice thinly against the grain.",
+    "Scatter with cilantro and serve with warm tortillas."
+  ],
+  "note": "Slicing against the grain is not optional — skirt steak has long, visible muscle fibers that turn chewy if cut the wrong way."
+}
