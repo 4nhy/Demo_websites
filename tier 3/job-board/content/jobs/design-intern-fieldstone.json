@@ -1,0 +1,25 @@
+{
+  "slug": "design-intern-fieldstone",
+  "title": "Design Intern, Summer 2027",
+  "company": "Fieldstone",
+  "category": "Internships",
+  "location": "Portland, OR",
+  "remote": false,
+  "type": "Internship",
+  "level": "Internship",
+  "postedAt": "2026-08-30",
+  "dek": "A 10-week internship helping design the store-visit research program, then turning what we learn into real interface changes.",
+  "description": [
+    "Fieldstone's design team is two people, and this internship is deliberately structured to give you exposure to the full loop — research, design, and seeing a change ship — rather than one narrow slice of it. You'd join our monthly in-store research visits (Pacific Northwest hardware and farm-supply stores), take notes and photos, and help synthesize what we saw into concrete design problems.",
+    "From there, you'd take ownership of at least one small, real interface improvement from sketch through a shipped version reviewed by actual users on a following store visit. Past interns have redesigned parts of the receiving flow's confirmation screens and a low-stock alert that store staff said they kept accidentally dismissing.",
+    "This internship includes travel to 2–3 stores over the summer (expenses covered) as a core part of the program, not an occasional extra."
+  ],
+  "requirements": [
+    "Currently pursuing a degree in design, HCI, or a related field, or equivalent self-directed portfolio work",
+    "Some prior exposure to Figma and basic usability research methods (a class project counts)",
+    "Comfortable observing and talking to people who are not designers and don't think in design terms",
+    "Able to work from our Portland studio for the 10-week program, with occasional regional travel",
+    "A portfolio or writing sample showing how you think through a problem, not just polished final screens"
+  ],
+  "photoId": "intern-02"
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "engineering-intern-northbound-robotics",
+  "title": "Engineering Intern, Summer 2027",
+  "company": "Northbound Robotics",
+  "category": "Internships",
+  "location": "Pittsburgh, PA",
+  "remote": false,
+  "type": "Internship",
+  "level": "Internship",
+  "postedAt": "2026-09-04",
+  "dek": "A 12-week internship on the Platform team, working on the same fleet-management tools the full-time engineers ship to production.",
+  "description": [
+    "This is a 12-week summer internship on Northbound's Platform team, the group that keeps roughly 900 warehouse robots updated and monitored in the field. You won't be doing a side project disconnected from the real product — interns here get a scoped piece of an actual roadmap item, this year likely related to improving the diagnostic tooling field technicians use when a robot goes offline.",
+    "You'd be paired with a full-time engineer as a mentor, attend the same team standups as everyone else, and present your work at the company-wide intern demo day in week 11. Past interns have shipped things that stayed in production — one built a dashboard view that's still how the ops team checks fleet-wide battery health.",
+    "We keep our intern cohort small (2–3 people) on purpose, so you'll get real one-on-one time with engineers rather than being one of thirty interns competing for attention."
+  ],
+  "requirements": [
+    "Currently pursuing a degree in computer science, computer engineering, or a related field, graduating December 2027 or later",
+    "Comfortable with at least one of Python, Go, or C++ from coursework or personal projects",
+    "Curiosity about systems that touch the physical world — you don't need robotics experience, just genuine interest",
+    "Able to work in-office in Pittsburgh for the full 12 weeks; we don't offer a remote option for this program",
+    "A GitHub profile, class project, or personal project you can walk us through is more useful to us than a GPA"
+  ],
+  "photoId": "intern-01"
+}

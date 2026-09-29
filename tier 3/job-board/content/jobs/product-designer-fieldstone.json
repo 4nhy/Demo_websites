@@ -1,0 +1,25 @@
+{
+  "slug": "product-designer-fieldstone",
+  "title": "Product Designer",
+  "company": "Fieldstone",
+  "category": "Design",
+  "location": "Portland, OR",
+  "remote": false,
+  "type": "Full-time",
+  "level": "Mid",
+  "postedAt": "2026-09-14",
+  "dek": "Fieldstone makes inventory software for independent hardware stores. You'd design for people counting stock on a phone, in an aisle, with one hand full.",
+  "description": [
+    "Fieldstone sells inventory and ordering software to independent hardware and farm-supply stores — the kind of business that's been run out of a spiral notebook for thirty years and is switching to us instead of a big-box chain's system. Our users are store owners and their employees, often mid-50s and up, often not particularly interested in software, using our app on a phone while physically standing in front of a shelf.",
+    "You'd be the second designer on a team of twelve, working closely with the founder (a former hardware store manager) and two engineers on the receiving and reorder flows — the part of the product where someone scans a barcode, confirms a quantity against what showed up on the truck, and the system decides whether to flag a reorder. Small interface decisions here have outsized consequences: a confirm button in the wrong place has led to real over-orders.",
+    "Most of your research will be in-person. We visit two or three stores a month, and you'd be expected to go, watch someone use the current flow, and bring back what's actually happening rather than what the support tickets say is happening."
+  ],
+  "requirements": [
+    "3+ years of product design experience shipping features in a live product, not just concepts",
+    "A portfolio that shows process — sketches, iterations, what you learned from a design that didn't work — not only final screens",
+    "Comfortable designing for older or less tech-fluent users without treating that as a lesser design problem",
+    "Willingness to travel regionally (Pacific Northwest, roughly monthly) for in-store research",
+    "Figma fluency; we don't use a formal design system yet, so you'd be helping build the first version of one"
+  ],
+  "photoId": "design-01"
+}

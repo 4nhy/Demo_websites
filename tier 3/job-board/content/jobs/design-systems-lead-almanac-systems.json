@@ -1,0 +1,25 @@
+{
+  "slug": "design-systems-lead-almanac-systems",
+  "title": "Design Systems Lead",
+  "company": "Almanac Systems",
+  "category": "Design",
+  "location": "Remote (US)",
+  "remote": true,
+  "type": "Full-time",
+  "level": "Senior",
+  "postedAt": "2026-09-05",
+  "dek": "Three product surfaces, three slightly different button components, and a component library nobody fully trusts. You'd be the person who fixes that.",
+  "description": [
+    "Almanac Systems grew fast enough that our scheduling grid, our admin console, and our newer mobile web view were each built by different teams at different times — and it shows. There are three different date pickers in production right now, and at least two of them have known accessibility issues nobody's had time to own.",
+    "This is a newly created role. You'd start by auditing what exists, deciding what's worth consolidating versus rebuilding, and proposing a plan to the design and engineering leads rather than being handed one. The first concrete deliverable will likely be a shared token system (color, spacing, type) that the three surfaces can adopt incrementally, since a big-bang rewrite isn't realistic given the product is live in hospitals.",
+    "You'd work with four other designers and a rotating set of engineers depending on which surface is adopting the system that quarter. This role has real influence but also real ambiguity — there's no existing design-systems function to slot into."
+  ],
+  "requirements": [
+    "5+ years in product design, with at least 2 years specifically building or maintaining a design system used by other people",
+    "Comfortable in Figma's component and variable tooling, and in reading React component code well enough to review a PR",
+    "Experience getting a design system adopted by teams that didn't ask for it — this is a change-management job as much as a design one",
+    "Accessibility knowledge beyond 'run an automated checker' — this product has real WCAG obligations given its healthcare customers",
+    "Comfortable working async and mostly asynchronously across a distributed team"
+  ],
+  "photoId": "design-02"
+}

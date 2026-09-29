@@ -1,0 +1,25 @@
+{
+  "slug": "lifecycle-marketing-manager-bellwether-finance",
+  "title": "Lifecycle Marketing Manager",
+  "company": "Bellwether Finance",
+  "category": "Marketing",
+  "location": "Remote (US)",
+  "remote": true,
+  "type": "Full-time",
+  "level": "Mid",
+  "postedAt": "2026-09-01",
+  "dek": "About 60% of Bellwether's signups never fund their first account. You'd own every email and in-app message between signup and that first deposit.",
+  "description": [
+    "Bellwether Finance offers a savings and investing account aimed at people who've never used one before. Our biggest, most stubborn drop-off point is between account creation and first deposit — the moment where someone has to actually link a bank account and move real money, and a lot of people just... don't, and we don't fully know why yet for each individual case.",
+    "You'd own the full lifecycle messaging program for that gap: email sequences, in-app prompts, and the experiment backlog testing different explanations, incentives, and timing. This is a highly measured role — you'll be expected to run A/B tests, read the results honestly (including when they're flat or negative), and adjust rather than just shipping more messages.",
+    "You'd work with one lifecycle designer, a data analyst who can pull funnel numbers on request, and regularly present findings to a product team that has opinions about what the drop-off means. Part of the job is making the case for what the data actually shows versus what's assumed."
+  ],
+  "requirements": [
+    "3+ years in lifecycle or growth marketing, ideally with fintech or another trust-sensitive product",
+    "Comfortable owning A/B tests end to end — hypothesis, setup, analysis, and a clear writeup of what happened",
+    "Experience with an ESP/marketing automation tool (we use Braze) and enough SQL to pull your own basic funnel data",
+    "Direct, honest communication — this role reports results to product weekly and the numbers aren't always flattering",
+    "Fintech, compliance-adjacent marketing experience is a plus given regulatory review on certain messaging"
+  ],
+  "photoId": "mktg-01"
+}

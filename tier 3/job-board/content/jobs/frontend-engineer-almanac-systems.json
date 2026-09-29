@@ -1,0 +1,25 @@
+{
+  "slug": "frontend-engineer-almanac-systems",
+  "title": "Frontend Engineer",
+  "company": "Almanac Systems",
+  "category": "Engineering",
+  "location": "Remote (US)",
+  "remote": true,
+  "type": "Full-time",
+  "level": "Mid",
+  "postedAt": "2026-09-09",
+  "dek": "Almanac's scheduling product is used by about 60 hospital systems to build physician rotations. The interface has to survive someone building a schedule at 2am.",
+  "description": [
+    "Almanac makes scheduling software for hospital departments — the tool a chief resident opens in November to figure out who's covering the ICU over the holidays. The core interaction is a large, dense grid: hundreds of shifts, dozens of constraints (max consecutive nights, required rest periods, union rules that vary by state), and a person dragging blocks around trying to make it balance.",
+    "You'd join a 5-person product engineering team working in React and TypeScript, with a custom virtualized grid component that we've rebuilt twice as the constraint logic got more complex. The current project is adding a conflict-preview layer — when you drag a shift, the grid should show which other shifts it breaks before you drop it, not after you save and get an error toast.",
+    "This isn't a green-field product. You'll spend real time reading existing code, understanding why a particular workaround exists (usually: a hospital's specific union contract), and being careful about performance, since some of our customers run grids with 15,000+ cells rendering constraint state in real time."
+  ],
+  "requirements": [
+    "3+ years with React and TypeScript in a production application with real complexity, not just CRUD screens",
+    "Experience with performance-sensitive UI — virtualization, memoization, or profiling a slow render and knowing why it's slow",
+    "Comfortable owning a feature from a vague product spec through shipped code and a follow-up bug report",
+    "Healthcare domain knowledge is not required and most of the team didn't have it either",
+    "Written communication matters here — the team is fully remote across four time zones and works async by default"
+  ],
+  "photoId": "eng-03"
+}

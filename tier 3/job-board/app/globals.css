@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — from DIRECTION.md ("Swiss Signal"). Single committed light
+  palette: warm paper, warm near-black ink, one dominant red accent, one
+  sparing blue accent reserved for category color-coding. No gradients, no
+  photo color-grading (photography is desaturated to grayscale in CSS
+  instead).
+*/
+:root {
+  --color-paper: #faf7f2; /* page background — warm off-white, not stark white */
+  --color-ink: #1a1614; /* primary text, display headlines — warm charcoal, not cold black */
+  --color-surface: #f0ebe1; /* card / section-alternation background */
+  --color-red: #cc2a14; /* primary accent — CTAs, the disc, active states.
+    Darkened from the original #e3341a: that value was ~4.4:1 against white
+    (fails WCAG AA's 4.5:1 for normal text/button labels); this is ~5.4:1.
+    Kept as-is against the warm paper — already orange-leaning, not a cold
+    crimson, so no adjustment needed (confirmed via swatch comparison). */
+  --color-blue: #0047ff; /* secondary accent — category color-coding only */
+  --color-line: #ddd4c4; /* hairline grid rules, dividers, borders */
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-red: var(--color-red);
+  --color-blue: var(--color-blue);
+  --color-line: var(--color-line);
+
+  --font-sans: var(--font-inter-tight);
+  --font-mono: var(--font-plex-mono);
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  /* Defensive: several reveal animations translate elements off-screen
+     before they scroll into view (job rows ±40px, testimonials ±60px).
+     That's real content, momentarily positioned via transform — not a
+     layout bug — but it does transiently extend document.scrollWidth
+     before the element is ever visible. Clipping horizontal overflow at
+     the root is the standard guard for exactly this case. */
+  overflow-x: hidden;
+}
+
+/* Grayscale/high-contrast photography grade (DIRECTION.md M5) — applied to
+   every photo sitewide so color lives only in the graphic system. */
+.photo-grade {
+  filter: grayscale(1) contrast(1.12) brightness(0.98);
+}
+
+/* Every motion addition must respect this — destroy Lenis / ScrollTrigger
+   instances under it, don't just skip a class (tiers.md). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

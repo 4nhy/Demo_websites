@@ -1,0 +1,25 @@
+{
+  "slug": "mobile-engineer-glasswing-health",
+  "title": "Mobile Engineer, iOS",
+  "company": "Glasswing Health",
+  "category": "Engineering",
+  "location": "Boston, MA",
+  "remote": false,
+  "type": "Full-time",
+  "level": "Senior",
+  "postedAt": "2026-08-28",
+  "dek": "Glasswing's app is how about 40,000 people track a chronic condition daily. Reliability isn't a nice-to-have here — a missed reminder has consequences.",
+  "description": [
+    "Glasswing Health builds a companion app for people managing chronic kidney disease — medication reminders, lab result tracking, and a symptom log that patients share with their care team. It's a quiet, unglamorous kind of app: no feed, no engagement loops, just something that has to work correctly every day for people who are often already dealing with a lot.",
+    "You'd be the second dedicated iOS engineer, working alongside one Android engineer and a shared backend team. Current focus is moving our notification scheduling off a brittle local-notifications approach (which silently fails after iOS updates more often than we'd like) onto a more resilient server-driven push architecture — while keeping offline logging fully functional, since patients often complete their symptom log without signal.",
+    "We run a limited clinical pilot with two nephrology practices, so occasionally a bug report comes with a patient's actual medical context attached, redacted but real. That changes how carefully you want to test things before they ship."
+  ],
+  "requirements": [
+    "5+ years of iOS development, Swift and SwiftUI, with at least one app you shipped that's still in the App Store",
+    "Experience with offline-first data patterns — local persistence, sync conflict resolution, retry logic",
+    "Comfortable with notification scheduling, background tasks, and the specific pain of iOS's changing rules around both",
+    "Health/regulated-industry experience is a plus but not required; what matters more is caring about correctness under real constraints",
+    "HIPAA-adjacent work requires a background check as part of the offer process"
+  ],
+  "photoId": "eng-01"
+}

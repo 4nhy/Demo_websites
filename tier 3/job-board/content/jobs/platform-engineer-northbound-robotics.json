@@ -1,0 +1,25 @@
+{
+  "slug": "platform-engineer-northbound-robotics",
+  "title": "Platform Engineer",
+  "company": "Northbound Robotics",
+  "category": "Engineering",
+  "location": "Pittsburgh, PA",
+  "remote": false,
+  "type": "Full-time",
+  "level": "Mid",
+  "postedAt": "2026-09-12",
+  "dek": "Our warehouse robots ship firmware over the air to about 900 units in the field. You'd build the pipeline that gets it there safely.",
+  "description": [
+    "Northbound builds autonomous pallet-moving robots for mid-size distribution warehouses. Each robot runs a Linux-based stack on an embedded board, and every unit we've shipped since 2023 phones home to a fleet-management service that tracks battery health, navigation errors, and firmware version.",
+    "The Platform team (4 engineers) owns that fleet service, the OTA update pipeline, and the internal tooling our field techs use to diagnose a robot that's gotten stuck or gone dark. Right now, rolling out a firmware update to the full fleet takes about six hours of staged rollout and manual monitoring — your first project would likely be automating the rollback trigger so a bad update halts itself instead of a human noticing three warehouses' worth of error logs at 11pm.",
+    "You'd work closely with the two firmware engineers and occasionally with the warehouse ops team when something goes wrong on-site. About once a quarter someone from Platform travels to a customer site to debug a fleet-wide issue in person — that's not required, but people who've done it say it's the part of the job that changes how they write the fleet code."
+  ],
+  "requirements": [
+    "3+ years working on backend or infrastructure systems, ideally something with a physical or embedded component",
+    "Comfortable with Python or Go for service code, and enough Linux systems knowledge to read a kernel panic and not panic yourself",
+    "Experience with a message queue or pub/sub system (we use MQTT for device comms, Kafka internally)",
+    "Have shipped something where a bad deploy had real-world consequences beyond a dashboard error",
+    "No robotics background required — most of the team came from web infrastructure"
+  ],
+  "photoId": "eng-02"
+}

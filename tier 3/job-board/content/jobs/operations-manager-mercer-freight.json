@@ -1,0 +1,25 @@
+{
+  "slug": "operations-manager-mercer-freight",
+  "title": "Operations Manager",
+  "company": "Mercer Freight",
+  "category": "Operations",
+  "location": "Newark, NJ",
+  "remote": false,
+  "type": "Full-time",
+  "level": "Senior",
+  "postedAt": "2026-09-08",
+  "dek": "Mercer coordinates freight for about 30 regional trucking partners. You'd run the daily dispatch floor where the plan meets what actually happens.",
+  "description": [
+    "Mercer Freight is a freight brokerage matching shippers with a network of about 30 regional trucking companies across the Northeast. The job of the operations floor is simple to describe and hard to do well: a load has to be picked up and delivered on time, and when a truck breaks down, a driver runs out of hours, or a shipper's dock closes early, someone has to re-solve the problem in real time, usually on the phone.",
+    "You'd manage a team of 5 dispatchers, own the daily standup that reviews at-risk loads, and be the escalation point when a dispatcher can't resolve something themselves — a carrier no-show two hours before a pickup, a rate dispute, a shipment that's going to miss a delivery window no matter what. You'd also own the monthly report to leadership on on-time performance and where it's slipping.",
+    "This is an in-person, floor-based role — the team works from our Newark office and the job is largely about being physically present when things go sideways, not managing from a dashboard remotely."
+  ],
+  "requirements": [
+    "4+ years in freight, logistics, or supply chain operations, with at least 1 year in a people-management role",
+    "Comfortable making a fast decision with incomplete information and owning the outcome",
+    "Experience with a TMS (transportation management system) — we use McLeod",
+    "Direct, calm communication style; dispatchers and carriers both need clear instructions under pressure, not vague ones",
+    "Available for occasional early-morning or evening escalations during peak shipping weeks"
+  ],
+  "photoId": "ops-01"
+}

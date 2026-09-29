@@ -1,0 +1,25 @@
+{
+  "slug": "senior-backend-engineer-harbor-analytics",
+  "title": "Senior Backend Engineer",
+  "company": "Harbor Analytics",
+  "category": "Engineering",
+  "location": "San Francisco, CA",
+  "remote": false,
+  "type": "Full-time",
+  "level": "Senior",
+  "postedAt": "2026-09-15",
+  "dek": "Harbor's billing pipeline processes usage events for about 400 customers. You'd own the parts that decide what they get charged.",
+  "description": [
+    "Harbor Analytics sells metering and billing infrastructure to companies that charge by usage — API calls, compute minutes, seats that fluctuate monthly. Our core pipeline ingests roughly 40 million events a day, aggregates them against each customer's pricing model, and produces an invoice that has to be right, because when it's wrong, someone's finance team calls us.",
+    "You'd join the 6-person Ledger team, which owns the aggregation and invoicing services (Go, Postgres, Kafka). Recent work included rebuilding our proration logic after a customer's mid-cycle plan change produced a negative invoice line, and adding idempotency keys to the event ingestion path after a retry storm double-billed three accounts for an afternoon. That's the kind of bug you'd be the second or third person to look at.",
+    "We ship to production several times a day behind feature flags, and every engineer carries a rotation week roughly once every six weeks. On-call pages are rare but not theoretical — you should be someone who wants to understand why a query plan changed, not just restart the pod."
+  ],
+  "requirements": [
+    "5+ years building backend services in a strongly typed language — ours is Go, but strong Java, C#, or Rust experience transfers",
+    "Have worked directly with a system where correctness had a dollar amount attached to it (billing, payments, ledgers, inventory)",
+    "Comfortable reading and writing non-trivial SQL against Postgres — we don't use an ORM for the ledger tables",
+    "Can explain a production incident you were involved in and what changed afterward, not just that it got fixed",
+    "Experience with Kafka or an equivalent event stream is a plus, not a requirement — we'll teach the specifics"
+  ],
+  "photoId": "eng-01"
+}
