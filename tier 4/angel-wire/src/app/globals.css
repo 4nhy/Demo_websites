@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+/* ANGEL WIRE — palette, per DIRECTION.md's confirmed-final (2026-09-11)
+   dark/gothic sterling-silver direction: near-black/charcoal grounds, cool
+   sterling-silver metallics, dramatic high-contrast lighting. This
+   supersedes every prior pass (glossy Y2K pink/lilac, then warm
+   vintage-thrift oxblood/cream, then a pastel-holographic hero-only
+   exploration). A full inversion, not an accent swap — the site's *ground*
+   goes from light to near-black, and ink/accent roles invert with it. Token
+   *names* are unchanged (still rewiring every consuming component was a
+   bigger risk than the naming mismatch) — only the hex values and their
+   meaning change:
+
+   chrome-white -> Onyx Ground   #0B0B0E  (primary background — was light
+                                            cream, then violet-white; now
+                                            near-black charcoal)
+   grape-ink    -> Sterling Ink  #E7E7ED  (primary text/ink — was dark-on-
+                                            light; now cool off-white/silver,
+                                            light-on-dark)
+   bubblegum    -> Brushed Steel #B8BEC7  (primary accent — cool mid-grey
+                                            metallic, replacing every pink
+                                            this token has ever held)
+   cyber-lilac  -> Gunmetal      #4A4E57  (secondary accent — deep charcoal-
+                                            blue-grey; background/panel use
+                                            only — too close in value to the
+                                            near-black ground to read as
+                                            foreground text at reduced
+                                            opacity, so no component should
+                                            use it for small label text)
+   acid-lime    -> Mirror Flash  #F5F6F8  (spark accent — near-white hard
+                                            specular highlight, tiny doses
+                                            only, same restrained-use
+                                            discipline as every prior pass)
+
+   Retired, not reassigned (per DIRECTION.md — the "Never Restocked"
+   Y2K-sticker moment needs a register-appropriate replacement, not a silent
+   hex swap; that's an open design decision, not done here): */
+:root {
+  --color-chrome-white: #0b0b0e;
+  --color-grape-ink: #e7e7ed;
+  --color-bubblegum: #b8bec7;
+  --color-cyber-lilac: #4a4e57;
+  --color-acid-lime: #f5f6f8;
+  --color-sticker-teal: #1f8a7a;
+  --color-sticker-yellow: #f0b429;
+
+  --background: var(--color-chrome-white);
+  --foreground: var(--color-grape-ink);
+
+  --wire-stroke-width: 1.5px;
+  --wire-opacity: 0.55;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-chrome-white: var(--color-chrome-white);
+  --color-grape-ink: var(--color-grape-ink);
+  --color-bubblegum: var(--color-bubblegum);
+  --color-cyber-lilac: var(--color-cyber-lilac);
+  --color-acid-lime: var(--color-acid-lime);
+  --color-sticker-teal: var(--color-sticker-teal);
+  --color-sticker-yellow: var(--color-sticker-yellow);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  :root {
+    /* Mobile: reduced visual prominence per the wire's degradation spec. */
+    --wire-stroke-width: 1px;
+    --wire-opacity: 0.4;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Extra character on the display face at hero scale — Fraunces' SOFT/WONK
+   axes lean the letterforms slightly off-true at large size. Used sparingly
+   (hero wordmark only), not on every heading — "controlled chaos" means the
+   loudest type treatment stays rare. Degrades harmlessly if unsupported. */
+.font-wonk {
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+
+/* ---------- ANGEL WIRE signature element ---------- */
+
+.wire-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Sits above the section background, below anything z-[2]+ (images). */
+.wire-back {
+  z-index: 1;
+}
+
+/* Sits above images (z-[2]), below anything z-[4]+ (text that must stay
+   legible — the wire must never interfere with readability). */
+.wire-front {
+  z-index: 3;
+}
+
+.wire-path {
+  fill: none;
+  stroke: var(--color-grape-ink);
+  stroke-width: var(--wire-stroke-width);
+  stroke-linecap: round;
+  opacity: var(--wire-opacity);
+}
+
+.wire-knot {
+  fill: var(--color-bubblegum);
+}
+
+.wire-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+/* New Arrivals filmstrip — hides the native scrollbar so the strip reads as
+   film, not a browser widget. The strip stays keyboard- and touch-scrollable;
+   only the visible bar is removed. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Product gallery crossfade — re-triggers on every keyed remount (a new
+   image id), giving a real fade-in instead of an instant swap. Kept as a
+   plain CSS keyframe rather than JS so it can't fight React's own render
+   timing. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 400ms ease-out;
+}
+
+/* Manifesto's chrome text-fill — a silver/chrome reflective band (Gunmetal
+   shadow -> Brushed Steel metal -> Mirror Flash hard highlight -> Brushed
+   Steel -> Gunmetal), same structure as the hero sweep bar's monochrome
+   band. Was a gold gradient under the old palette; rewritten for the
+   dark/gothic sterling-silver direction — silver, not gold, per
+   DIRECTION.md. Reused for the binder clips (Collections Line) and
+   wax-seal-style tags (Lookbook, New Arrivals) via the same three tokens,
+   not this class directly (those are small solid chips, not text fills). */
+.chrome-text {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-cyber-lilac) 0%,
+    var(--color-bubblegum) 35%,
+    var(--color-acid-lime) 50%,
+    var(--color-bubblegum) 65%,
+    var(--color-cyber-lilac) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Collections chapter backgrounds — a genuine animated gradient per mood,
+   not a flat fill. REVISED (2026-09-13): the first pass (two/three close-
+   value tones, ~200% background-size, slow drift) was too subtle to read
+   as "a gradient" at all — it registered as a flat color that happened to
+   shift a few pixels. This pass goes deliberately further: each is now a
+   wide-range 5-stop sweep from near-black up to a genuinely lit highlight
+   in that mood's own hue (not just a lighter version of the same near-
+   black), at 320% background-size so a large, visibly different portion of
+   the gradient is on-screen at any time, animating over a real diagonal
+   distance rather than a small drift. Durations shortened so the motion is
+   noticeable within a normal glance, not just on close observation. Angel
+   Hour's peak is the warmest/brightest (glitter catching light — the most
+   "lit" of the four); After Dark stays the darkest overall (still correctly
+   the calmest) but its own peak is now a real, visible step up from its
+   base, not a near-invisible one; Soft Damage swings through a wide neutral
+   grey range; Found Objects peaks at a lit bronze/gold. `background-size`
+   > 100% is required for `background-position` to have anywhere to move. */
+/* Position keyframes stay within [0%, 100%] on both axes — at
+   background-size: 320% with no-repeat, going outside that range runs the
+   image off one edge of the section with nothing to fill the gap on the
+   other (a hard solid-color edge, caught the same way as the tiling seam
+   above: by actually looking at two frames, not just trusting the numbers).
+   Each mood still gets a genuinely different sweep path, not just a
+   different speed: Angel Hour corner-to-corner one diagonal, After Dark
+   the opposite diagonal, Soft Damage a level horizontal pass, Found
+   Objects a vertical one. */
+@keyframes mood-drift-angel-hour {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+}
+@keyframes mood-drift-after-dark {
+  0%, 100% { background-position: 100% 0%; }
+  50% { background-position: 0% 100%; }
+}
+@keyframes mood-drift-soft-damage {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes mood-drift-found-objects {
+  0%, 100% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
+}
+
+/* background-repeat: no-repeat is load-bearing here, not decoration — at
+   background-size > 100%, the default `repeat` tiles the gradient, and
+   once the animated position moves far enough to cross a tile boundary it
+   shows as a hard rectangular seam (caught visually: two screenshots a few
+   seconds apart showed a visible edge splitting the section into blocks,
+   not a continuous sweep). */
+.bg-mood-angel-hour {
+  background-image: linear-gradient(120deg, #100a0d 0%, #341a24 25%, #7a3a4e 50%, #341a24 75%, #100a0d 100%);
+  background-size: 320% 320%;
+  background-repeat: no-repeat;
+  animation: mood-drift-angel-hour 8s ease-in-out infinite;
+}
+.bg-mood-after-dark {
+  background-image: linear-gradient(135deg, #060608 0%, #121219 25%, #2a2a38 50%, #121219 75%, #060608 100%);
+  background-size: 320% 320%;
+  background-repeat: no-repeat;
+  animation: mood-drift-after-dark 12s ease-in-out infinite;
+}
+.bg-mood-soft-damage {
+  background-image: linear-gradient(115deg, #0e0e0f 0%, #232327 25%, #46464e 50%, #232327 75%, #0e0e0f 100%);
+  background-size: 320% 320%;
+  background-repeat: no-repeat;
+  animation: mood-drift-soft-damage 10s ease-in-out infinite;
+}
+.bg-mood-found-objects {
+  background-image: linear-gradient(150deg, #0f0b06 0%, #2e2210 25%, #7a5a24 50%, #2e2210 75%, #0f0b06 100%);
+  background-size: 320% 320%;
+  background-repeat: no-repeat;
+  animation: mood-drift-found-objects 9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-mood-angel-hour,
+  .bg-mood-after-dark,
+  .bg-mood-soft-damage,
+  .bg-mood-found-objects {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
