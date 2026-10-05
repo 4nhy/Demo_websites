@@ -1,0 +1,249 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+:root {
+  /* Ceiling — direction tokens, see DIRECTION.md */
+  --zenith: #e8edf2;
+  --cirrus: #b9c6d6;
+  --ionosphere: #0e1b2e;
+  --copper: #9c4f2b;
+  --copper-glow: #dd9668;
+  --signal: #f7f9fb;
+
+  /* colorways — product variants only, never brand/UI color */
+  --cw-slate: #6b7686;
+  --cw-glacier: #afcbdd;
+  --cw-rosewood: #8b5a4a;
+  --cw-graphite: #23262b;
+
+  --background: var(--zenith);
+  --foreground: var(--ionosphere);
+  --backdrop: var(--zenith);
+
+  --rhythm: 8rem;
+  --rhythm-sm: 4rem;
+}
+
+@theme inline {
+  --color-zenith: var(--zenith);
+  --color-cirrus: var(--cirrus);
+  --color-ionosphere: var(--ionosphere);
+  --color-copper: var(--copper);
+  --color-copper-glow: var(--copper-glow);
+  --color-signal: var(--signal);
+  --color-cw-slate: var(--cw-slate);
+  --color-cw-glacier: var(--cw-glacier);
+  --color-cw-rosewood: var(--cw-rosewood);
+  --color-cw-graphite: var(--cw-graphite);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--copper);
+  color: var(--signal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------- type scale: oversized, close to full width on desktop ---------- */
+
+.t-mega {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  font-size: clamp(4rem, 16.5vw, 19rem);
+  line-height: 0.84;
+  letter-spacing: -0.045em;
+}
+
+.t-display {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.9rem, 9.4vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: -0.038em;
+}
+
+.t-title {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5.6vw, 6.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.t-eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.t-lede {
+  font-size: clamp(1.125rem, 1.2vw + 0.6rem, 1.5rem);
+  line-height: 1.5;
+}
+
+.t-num {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+/* SplitText line masks must not clip descenders/accents on tight leading */
+.split-line-mask {
+  padding: 0.04em 0 0.1em;
+  margin: -0.04em 0 -0.1em;
+}
+
+/* ---------- scene tiers ---------- */
+
+/* stills are the static render of the same model; hidden once the live scene owns the stage */
+html[data-scene="3d"] .scene-still > * {
+  display: none;
+}
+html:not([data-scene="3d"]) .scene-only {
+  display: none;
+}
+html[data-scene="3d"] .scene-fallback {
+  display: none;
+}
+/* horizontal frequency journey: a row only while pinned in the live-scene tier */
+@media (min-width: 768px) {
+  html[data-scene="3d"] .hscroll-chapter {
+    overflow: hidden;
+  }
+  html[data-scene="3d"] .hscroll-track {
+    flex-direction: row;
+    gap: 4vw;
+    width: max-content;
+    height: 100%;
+    padding-right: 4vw;
+  }
+  html[data-scene="3d"] .hscroll-panel {
+    width: 56vw;
+    height: 100%;
+  }
+}
+
+/* full-screen pinned chapters only exist in the live-scene tier */
+@media (min-width: 768px) {
+  html[data-scene="3d"] .chapter-screen {
+    height: 100svh;
+  }
+}
+
+/* /studio still renderer: everything but the canvas goes transparent */
+html[data-studio] body {
+  background: transparent;
+}
+html[data-studio] .site-header,
+html[data-studio] footer,
+html[data-studio] .cursor-ring,
+html[data-studio] .scene-backdrop {
+  display: none;
+}
+
+/* ---------- header tone follows the backdrop ---------- */
+
+.site-header {
+  --ink: var(--ionosphere);
+  --ink-soft: rgb(14 27 46 / 0.68);
+  color: var(--ink);
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+}
+html[data-tone="light"] .site-header {
+  --ink: var(--signal);
+  --ink-soft: rgb(247 249 251 / 0.7);
+}
+.site-header[data-solid="true"] {
+  background: color-mix(in srgb, var(--backdrop) 82%, transparent);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border-color: color-mix(in srgb, var(--ink) 12%, transparent);
+}
+
+/* ---------- cursor ---------- */
+
+.cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border-radius: 9999px;
+  border: 1.5px solid #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+}
+.cursor-ring span {
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ---------- marquee ---------- */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* ---------- FAQ ---------- */
+
+details.faq summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.faq summary::-webkit-details-marker {
+  display: none;
+}
+details.faq .faq-icon {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+details.faq[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,7 @@
+# GSAP Club GreenSock (Tier 4 / Business) private registry.
+# Rename to .npmrc and set GSAP_AUTH_TOKEN in your shell env (never commit the token)
+# to install Club-only plugins: SplitText, MorphSVGPlugin, DrawSVGPlugin,
+# ScrambleTextPlugin, InertiaPlugin, and others.
+#
+# @gsap:registry=https://npm.greensock.com
+# //npm.greensock.com/:_authToken=${GSAP_AUTH_TOKEN}

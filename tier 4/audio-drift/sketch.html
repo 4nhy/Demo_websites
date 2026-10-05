@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sketch</title>
+<style>
+  :root{--bg:#f4f4f2;--ink:#1a1a1a;--soft:#8a8a86;--line:#d2d2ce;--box:#e2e2de;--asset:#f0dcc0;--assetline:#c9a86a;--ui:#dce4e6;--frame:1280px;--rhythm:128px}
+  @media (prefers-color-scheme:dark){:root{--bg:#141416;--ink:#ededea;--soft:#7e7e84;--line:#2e2e33;--box:#232328;--asset:#3a3021;--assetline:#8a6f3c;--ui:#22303a}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 ui-monospace,"Cascadia Mono",Menlo,Consolas,monospace}
+  header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  header b{font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .tier{border:1px solid var(--soft);border-radius:2px;padding:1px 7px;font-size:11px;color:var(--soft)}
+  .vp{display:flex;gap:4px;margin-left:auto}
+  .vp button{font:inherit;font-size:12px;background:transparent;color:var(--soft);border:1px solid var(--line);border-radius:2px;padding:3px 10px;cursor:pointer}
+  .vp button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+  .stat{font-size:12px;color:var(--soft)}
+
+  #stage{margin:0 auto;transition:max-width .18s ease;padding-bottom:80px}
+  section{padding-block:var(--rhythm);border-bottom:1px dashed var(--line);position:relative}
+  .inner{max-width:var(--frame);margin-inline:auto;padding-inline:clamp(16px,5vw,80px)}
+  .sec-tag{position:absolute;top:6px;left:6px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+  .sec-note{font-size:12px;color:var(--soft);margin:0 0 14px}
+  .row{display:grid;gap:12px;margin-bottom:12px}
+  .b{border:1px solid var(--line);background:var(--box);border-radius:2px;padding:10px;display:flex;flex-direction:column;justify-content:flex-end;min-height:40px}
+  .b .lb{font-size:11px;color:var(--soft)}
+  .b.type{background:transparent;border-style:none;padding:0}
+  .b.type .fake{background:var(--line);border-radius:1px;height:var(--h,14px);margin-bottom:7px}
+  .b.type .fake:last-of-type{width:62%}
+  .b.ui{background:var(--ui)}
+  .b.asset{background:var(--asset);border-color:var(--assetline);border-style:dashed}
+  .b.asset .id{font-size:11px;color:var(--ink);font-weight:700}
+
+  #manifest{max-width:var(--frame);margin:48px auto 0;padding-inline:clamp(16px,5vw,80px)}
+  #manifest h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);border-bottom:1px solid var(--line);padding-bottom:8px}
+  table{border-collapse:collapse;width:100%;font-size:12.5px}
+  th{text-align:left;color:var(--soft);font-weight:400;padding:6px 12px 6px 0;border-bottom:1px solid var(--line)}
+  td{padding:7px 12px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td.k{white-space:nowrap;font-weight:700}
+  .src{font-size:11px;border:1px solid var(--line);border-radius:2px;padding:1px 6px;white-space:nowrap}
+</style>
+</head>
+<body>
+<header>
+  <b id="hName"></b><span class="tier" id="hTier"></span>
+  <span class="stat" id="hStat"></span>
+  <span class="vp">
+    <button data-w="390">390</button><button data-w="768">768</button><button data-w="1440" aria-pressed="true">1440</button>
+  </span>
+</header>
+
+<div id="stage"></div>
+<div id="manifest"><h2>Asset manifest</h2><table id="mTable"></table></div>
+
+<script>
+const SITE = {
+  name: "Drift",
+  tier: "Tier 4",
+  frame: "1280px",
+  rhythm: "128px",
+  sections: [
+    { id: "nav", note: "Sticky, transparent → solid on scroll. No logo image — wordmark is type.",
+      rows: [
+        [{ kind:"type", span:3, lines:[14], label:"wordmark" },
+         { kind:"ui", span:6, label:"shop / sound / buy links" },
+         { kind:"ui", span:3, label:"CTA pill" }]
+      ]},
+    { id: "hero — The Descent", note: "Pinned ~180vh. Signature set-piece: cloud layer dissipates on scroll, product resolves, wordmark sits behind cloud.",
+      rows: [
+        [{ kind:"asset", span:12, id:"A1", ratio:"4:3", source:"stock", note:"Isolated product shot, composited into cloud layer" }],
+        [{ kind:"type", span:8, lines:[48,48], label:"headline — 'hear the altitude drop.'" }],
+        [{ kind:"ui", span:3, label:"scroll cue" }]
+      ]},
+    { id: "sound", note: "One claim: driver/diaphragm spec. Alternating — image left this time.",
+      rows: [
+        [{ kind:"asset", span:6, id:"A2", ratio:"4:3", source:"stock", note:"Driver/earcup macro" },
+         { kind:"type", span:6, lines:[24,14,14,14], label:"claim + spec copy" }]
+      ]},
+    { id: "anc", note: "Full-width single-claim band — texture, not subject.",
+      rows: [
+        [{ kind:"asset", span:12, id:"A3", ratio:"21:9", source:"CSS-SVG", note:"Animated gradient texture behind claim" }],
+        [{ kind:"type", span:8, lines:[36], label:"claim — 'silence, engineered.'" }]
+      ]},
+    { id: "soundstage", note: "One claim: spatial tuning. Alternating — image right.",
+      rows: [
+        [{ kind:"type", span:6, lines:[24,14,14,14], label:"claim + spec copy" },
+         { kind:"asset", span:6, id:"A4", ratio:"4:3", source:"stock", note:"No visible faces — cropped/hands only" }]
+      ]},
+    { id: "battery", note: "Full-width single-claim band, same pattern as ANC.",
+      rows: [
+        [{ kind:"asset", span:12, id:"A5", ratio:"21:9", source:"CSS-SVG", note:"Animated gradient texture" }],
+        [{ kind:"type", span:8, lines:[36], label:"claim — '40 hours. one charge.'" }]
+      ]},
+    { id: "colorway", note: "Pinned product + swatch rail. Second choreographed moment: background/accent morphs per swatch focused.",
+      rows: [
+        [{ kind:"asset", span:5, id:"A6", ratio:"4:5", source:"stock", note:"Slate — pinned product" }],
+        [{ kind:"ui", span:7, label:"4 swatch cards: Slate · Glacier · Rosewood · Graphite, each with name + price" }]
+      ]},
+    { id: "buy", note: "Final CTA, price, single clean product shot.",
+      rows: [
+        [{ kind:"asset", span:5, id:"A10", ratio:"1:1", source:"stock (reuse A1)", note:"Clean product shot" },
+         { kind:"type", span:4, lines:[28,14], label:"price + one line" },
+         { kind:"ui", span:3, label:"primary CTA — 'reserve yours'" }]
+      ]},
+    { id: "footer", note: "Minimal — wordmark, links, no imagery.",
+      rows: [
+        [{ kind:"type", span:4, lines:[12,12,12], label:"link columns" },
+         { kind:"type", span:4, lines:[12,12,12], label:"link columns" },
+         { kind:"type", span:4, lines:[10], label:"legal line" }]
+      ]}
+  ]
+};
+
+/* ---------- render ---------- */
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.style.setProperty("--frame", SITE.frame);
+document.documentElement.style.setProperty("--rhythm", SITE.rhythm);
+$("#hName").textContent = SITE.name;
+$("#hTier").textContent = SITE.tier;
+
+const assets = [];
+
+stage.innerHTML = SITE.sections.map(sec => `
+  <section>
+    <span class="sec-tag">${sec.id}</span>
+    <div class="inner">
+      ${sec.note ? `<p class="sec-note">${sec.note}</p>` : ""}
+      ${sec.rows.map(row => `
+        <div class="row" style="grid-template-columns:${row.map(b => (b.span||12) + "fr").join(" ")}">
+          ${row.map(b => block(b, sec.id)).join("")}
+        </div>`).join("")}
+    </div>
+  </section>`).join("");
+
+function block(b, secId) {
+  if (b.kind === "type") {
+    const lines = (b.lines || [14,14,14]).map(h => `<div class="fake" style="--h:${h}px"></div>`).join("");
+    return `<div class="b type">${lines}<span class="lb">${b.label||"text"}</span></div>`;
+  }
+  if (b.kind === "asset") {
+    assets.push({ ...b, section: secId });
+    const pad = ratioPad(b.ratio);
+    return `<div class="b asset" style="min-height:${pad}px">
+      <span class="id">${b.id}</span><span class="lb">${b.label||b.note||""} · ${b.ratio||""}</span></div>`;
+  }
+  return `<div class="b ui"><span class="lb">${b.label||"control"}</span></div>`;
+}
+
+function ratioPad(r) {
+  if (!r) return 120;
+  const [w,h] = r.split(":").map(Number);
+  if (!w || !h) return 120;
+  return Math.round(Math.min(420, Math.max(80, 300 * (h/w))));
+}
+
+$("#mTable").innerHTML = assets.length ? `
+  <tr><th>ID</th><th>Section</th><th>Ratio</th><th>Source</th><th>Note</th></tr>
+  ${assets.map(a => `<tr>
+    <td class="k">${a.id}</td><td>${a.section}</td><td>${a.ratio||"—"}</td>
+    <td><span class="src">${a.source||"tbd"}</span></td><td>${a.note||""}</td></tr>`).join("")}
+` : `<tr><td>No assets declared — Tier 1 or 2 sketch.</td></tr>`;
+
+$("#hStat").textContent =
+  `${SITE.sections.length} sections · ${assets.length} assets · rhythm ${SITE.rhythm}`;
+
+document.querySelectorAll(".vp button").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".vp button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  stage.style.maxWidth = btn.dataset.w + "px";
+}));
+</script>
+</body>
+</html>
